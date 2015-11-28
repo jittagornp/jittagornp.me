@@ -461,11 +461,11 @@
                     moment.locale('th');
 
                     $('.jpm-fromnow').each(function () {
-                        var $graduated = $(this);
-                        var dateStr = $graduated.attr('data-date-start');
+                        var $fromnow = $(this);
+                        var dateStr = $fromnow.attr('data-date-start');
 
                         var date = moment(new Date(dateStr));
-                        $graduated.html(date.fromNow(true));
+                        $fromnow.html(date.fromNow(true));
                     });
 
                 });
