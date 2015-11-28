@@ -4,10 +4,6 @@
         <title>jittagornp.me</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script type="text/javascript" src="static/js/jquery.js"></script>
-        <script type="text/javascript" src="static/js/moment.js"></script> 
-    </head>
-    <body>
         <style>
             *{
                 -webkit-box-sizing:border-box;
@@ -17,7 +13,7 @@
 
             body{
                 background-color: #fff;
-                padding: 50px 15px;
+                padding: 50px 15px 50px 15px;
                 margin: 0;
                 color : #444;
                 font-size: 12pt;
@@ -131,30 +127,39 @@
                 margin-top: 50px;
             }
 
-            .jpm-skill-block{
-                background-color: #F9F9F9;
-                padding: 10px 10px 10px 40px;
-                border: solid 1px #eee;
+            .jpm-skill{
+                border: solid 1px #e4e4e4;
+                padding: 0 15px;
                 border-radius: 3px;
                 -moz-border-radius: 3px;
                 -webkit-border-radius: 3px;
+            }
+            
+            .jpm-skill > h3{
+                border-bottom: solid 1px #eee;
+                padding: 10px;
+            }
+
+            .jpm-skill-block{
+              
             }
 
             .jpm-clear{
                 clear: both;
             }
-            
+
             .jpm-footer{
                 margin-top: 40px;
                 border-top: solid 1px #eee;
                 padding: 20px;
             }
         </style>
-
+    </head>
+    <body>
         <div class="jpm-container">
             <div class="jpm-header">
                 <div class="jpm-photo">
-                    <img src="static/image/me.jpg"/>
+                    <img src="static/image/me.jpg" alt="จิตกร พิทักษ์เมธากุล"/>
                 </div>
                 <h1 class="jpm-name">จิตกร พิทักษ์เมธากุล</h1>
                 <div class="jpm-aboutme">"i am programmer."</div>
@@ -162,13 +167,13 @@
             </div>
             <div class="jpm-body">
                 <blockquote>
-                    ผมชื่นชมคนที่มีผลงานเป็นของตัวเองมากกว่าคนที่มีใบ Certificate
+                    ผมชื่นชมคนที่มีผลงานเป็นของตัวเองมากกว่าคนที่มี Certificate
                 </blockquote>
                 <p style="margin-top: 40px;">
-                    ชื่อ<code class="jpm-highlight">เดียร์</code>ครับ อายุ <span class="jpm-highlight jpm-graduated" data-date="1989/07/21"></span> เป็นโปรแกรมเมอร์    
-                    ทำงานมาได้ <span class="jpm-highlight jpm-graduated" data-date="2012/04/30"></span> ล่ะ 
-                    ตั้งแต่เรียนจบปี <code class="jpm-highlight">2555 (2012)</code><br/> ที่มหาวิทยาลัยรามคำแหง (คณะวิศวกรรมศาสตร์ สาขาวิศวกรรมคอมพิวเตอร์)
-                    จบมาก็มาเป็นโปรแกรมเมอร์เลย  ในตำแหน่ง Java Developer ตอนนี้ก็ยังเป็น Java Dev อยู่ เพราะรู้สึกหลงใหลในภาษานี้
+                    ชื่อ<code class="jpm-highlight">เดียร์</code>ครับ อายุ <span class="jpm-highlight jpm-fromnow" data-date="1989/07/21"></span> เป็นโปรแกรมเมอร์    
+                    ทำงานมาได้ <span class="jpm-highlight jpm-fromnow" data-date="2012/04/30"></span> ล่ะ 
+                    ตั้งแต่เรียนจบปี <code class="jpm-highlight">2555 (2012)</code> ที่มหาวิทยาลัยรามคำแหง (คณะวิศวกรรมศาสตร์ สาขาวิศวกรรมคอมพิวเตอร์)
+                    จบมาก็มาเป็นโปรแกรมเมอร์เลย  ในตำแหน่ง Java Developer ตอนนี้ก็ยังเป็น Java Dev อยู่ เพราะรู้สึกหลงใหลในในอาชีพและภาษานี้
                 </p>
                 <h3>เคยทำอะไรที่ไหนมาบ้าง</h3>
                 <ul>
@@ -220,17 +225,17 @@
                         มี Best Practices ในการทำงาน 
                     </li>
                     <li>
-                        ตามเทคโนโลยี (Technology)
+                        ตามทันเทคโนโลยี (Technology)
                     </li>
                 </ul>
                 <h3>ทักษะ (Skill)</h3>
                 <p>
-                    เนื่องจากผมอยากมีบริษัทซอฟต์แวร์เป็นของตัวเอง  ผมอยากสร้างผลิตภัณฑ์ที่เจ๋งๆ ให้คนทั่วโลกใช้  ผมเลยต้องทำตัวเองให้เป็น 
+                    เนื่องจากผมอยากมีบริษัทซอฟต์แวร์เป็นของตัวเอง อยากสร้างผลิตภัณฑ์ที่เจ๋งๆ ให้คนทั่วโลกใช้  เลยต้องทำตัวเองให้เป็น 
                     <code class="jpm-highlight">Full Stack Developer</code> 
                     ซึ่งก็ทำเป็นประมาณนี้ครับ
                 </p>
                 <div class="jpm-skill">
-                    <h3>Front end</h3>
+                    <h3 style="margin-top: 15px">Front end</h3>
                     <ul class="jpm-skill-block">
                         <li>
                             Html
@@ -375,6 +380,12 @@
                     Bigbike
                 </li>
                 <li>
+                    จักรยาน
+                </li>
+                <li>
+                    การถ่ายภาพ
+                </li>
+                <li>
                     การวาดภาพ
                 </li>
                 <li>
@@ -385,6 +396,23 @@
                 </li>
                 <li>
                     เพลง Rock / Heavy / Metal
+                    <ul>
+                        <li>
+                            Linkin Park
+                        </li>
+                        <li>
+                            Avenged SevenFold
+                        </li>
+                        <li>
+                            Paramore
+                        </li>
+                        <li>
+                            Skillet
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    การ์ตูน One Piece
                 </li>
             </ul>
             <div class="jpm-footer">
@@ -392,15 +420,16 @@
             </div>
         </div>
 
-
+        <script type="text/javascript" src="static/js/jquery.js"></script>
+        <script type="text/javascript" src="static/js/moment.js"></script> 
         <script>
 
-            (function init($) {
-                $(function () {
+            (function scope($) {
+                $(function ready() {
 
                     moment.locale('th');
 
-                    $('.jpm-graduated').each(function () {
+                    $('.jpm-fromnow').each(function () {
                         var $graduated = $(this);
                         var dateStr = $graduated.attr('data-date');
 
