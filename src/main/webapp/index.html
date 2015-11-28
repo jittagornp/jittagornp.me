@@ -183,15 +183,15 @@
                     ผมชื่นชมคนที่มีผลงานเป็นของตัวเองมากกว่าคนที่มี Certificate
                 </blockquote>
                 <p style="margin-top: 40px;">
-                    ชื่อ<code class="jpm-highlight">เดียร์</code>ครับ อายุ <span class="jpm-highlight jpm-fromnow" data-date="1989/07/21"></span> เป็นโปรแกรมเมอร์    
-                    ทำงานมาได้ <span class="jpm-highlight jpm-fromnow" data-date="2012/04/30"></span> ล่ะ 
+                    ชื่อ<code class="jpm-highlight">เดียร์</code>ครับ อายุ <span class="jpm-highlight jpm-fromnow" data-date-start="1989/07/21"></span> เป็นโปรแกรมเมอร์    
+                    ทำงานมาได้ <span class="jpm-highlight jpm-fromnow" data-date-start="2012/04/30"></span> ล่ะ 
                     ตั้งแต่เรียนจบปี <code class="jpm-highlight">2555 (2012)</code> ที่มหาวิทยาลัยรามคำแหง (คณะวิศวกรรมศาสตร์ สาขาวิศวกรรมคอมพิวเตอร์)
                     จบมาก็มาเป็นโปรแกรมเมอร์เลย  ในตำแหน่ง Java Developer ตอนนี้ก็ยังเป็น Java Dev อยู่ เพราะรู้สึกหลงใหลในในอาชีพและภาษานี้
                 </p>
                 <h3>เคยทำอะไรที่ไหนมาบ้าง</h3>
                 <ul>
                     <li>
-                        เป็น <a href="http://na5cent.blogspot.com" target="_blank">Blogger</a> (ผมถือว่ามันเป็นส่วนหนึ่งในงานที่ผมรักครับ)
+                        เป็น <a href="http://na5cent.blogspot.com" target="_blank">Blogger</a> <span class="jpm-highlight jpm-fromnow" data-date-start="2010/11/01"></span> (ผมถือว่ามันเป็นส่วนหนึ่งในงานที่ผมรักครับ)
                     </li>
                     <li>
                         เป็นพนักงานบริษัทจีเนียส-ทรี (geniustree)
@@ -427,8 +427,11 @@
                         การ์ตูน One Piece
                     </li>
                 </ul>
-                <h3>Social / Profile อื่นๆ</h3>
+                <h3>Social / Profile ข้อมูลการติดต่อ อื่นๆ</h3>
                 <ul>
+                    <li>
+                        <a target="_top" href="mailto:jittagornp@gmail.com?Subject=สวัสดีจิตกร">Gmail</a>
+                    </li>
                     <li>
                         <a target="_blank" href="https://github.com/jittagornp">Github</a>
                     </li>
@@ -459,7 +462,7 @@
 
                     $('.jpm-fromnow').each(function () {
                         var $graduated = $(this);
-                        var dateStr = $graduated.attr('data-date');
+                        var dateStr = $graduated.attr('data-date-start');
 
                         var date = moment(new Date(dateStr));
                         $graduated.html(date.fromNow(true));
