@@ -187,6 +187,8 @@
                 margin-left: 5px;
                 font-size: 8pt;
                 border-radius: 8px;
+                -moz-border-radius: 8px;
+                -webkit-border-radius: 8px;
             }
         </style>
     </head>
@@ -194,7 +196,9 @@
         <div class="jpm-container">
             <div class="jpm-header">
                 <div class="jpm-photo">
-                    <img src="static/image/me.jpg" alt="จิตกร พิทักษ์เมธากุล"/>
+                    <img src="static/image/me_small.jpg"  
+                         onclick="window.open('static/image/me.jpg')"
+                         alt="จิตกร พิทักษ์เมธากุล"/>
                 </div>
                 <h1 class="jpm-name">จิตกร พิทักษ์เมธากุล</h1>
                 <div class="jpm-aboutme">"i am programmer."</div>
@@ -449,7 +453,7 @@
                         <ul>
                             <li>
                                 ตอนนี้ผมก็มีรอยสักอยู่ที่แขนทั้ง 2 ข้าง
-                                บางคนอาจจะไม่ชอบ  แต่ผมก็บอกกับตัวไว้แล้ว  ว่าผมจะทำในสิ่งที่ตัวเองรักและมีความสุขไปกับมันครับ  
+                                บางคนอาจจะไม่ชอบ  แต่ผมก็บอกกับตัวไว้แล้วว่า ผมจะทำในสิ่งที่ตัวเองรักและมีความสุขไปกับมันครับ  
                                 เมื่อเรามีความสุข แน่นอนว่าเราจะทำทุกๆ อย่างออกมาได้ดีเสมอ
                             </li>
                         </ul>
@@ -458,7 +462,7 @@
                         การเดินทางท่องเที่ยว
                         <ul>
                             <li>
-                                แนวธรรมชาติ / Backpack
+                                ธรรมชาติ / Backpack
                             </li>
                         </ul>
                     </li>
@@ -498,7 +502,7 @@
                         ไปดูการแข่งขัน Bigbike The isle of man ที่ประเทศอังกฤษ
                     </li>
                     <li>
-                        กระโดดบันจี้จั๊ม <span class="jpm-checked">&#10004;</span>
+                        กระโดดบันจี้จั๊ม <img class="jpm-checked" src="static/image/checked.png"/>
                     </li>
                     <li>
                         ไปเที่ยวที่ Machu Picchu ประเทศเปรู
@@ -535,25 +539,25 @@
         <script type="text/javascript" src="static/js/moment.js"></script> 
         <script>
 
-            (function scope($) {
-                $(function ready() {
+                             (function scope($) {
+                                 $(function ready() {
 
-                    moment.locale('th');
+                                     moment.locale('th');
 
-                    $('.jpm-fromnow').each(function () {
-                        var $fromnow = $(this);
-                        var dateStr = $fromnow.attr('data-date-start');
+                                     $('.jpm-fromnow').each(function () {
+                                         var $fromnow = $(this);
+                                         var dateStr = $fromnow.attr('data-date-start');
 
-                        var date = moment(new Date(dateStr));
-                        $fromnow.html(date.fromNow(true));
-                    });
+                                         var date = moment(new Date(dateStr));
+                                         $fromnow.html(date.fromNow(true));
+                                     });
 
-                    $('a').each(function () {
-                        $(this).attr('target', '_blank');
-                    });
+                                     $('a').each(function () {
+                                         $(this).attr('target', '_blank');
+                                     });
 
-                });
-            })(jQuery);
+                                 });
+                             })(jQuery);
         </script>
     </body>
 </html>
