@@ -197,7 +197,7 @@
             <div class="jpm-header">
                 <div class="jpm-photo">
                     <img src="static/image/me_small.jpg"  
-                         onclick="window.open('static/image/me.jpg')"
+                         onclick="window.open('static/image/me.jpg', 'จิตกร พิทักษ์เมธากุล')"
                          alt="จิตกร พิทักษ์เมธากุล"/>
                 </div>
                 <h1 class="jpm-name">จิตกร พิทักษ์เมธากุล</h1>
@@ -260,7 +260,7 @@
                 <h3>สภาพแวดล้อมการทำงานที่ชื่นชอบเป็นพิเศษ</h3>
                 <ul>
                     <li>
-                        เป็นองค์กรที่มีผลิตภัณฑ์ (product) เป็นของตัวเอง
+                        เป็นองค์กรที่มีผลิตภัณฑ์ (Product) เป็นของตัวเอง
                     </li>
                     <li>
                         เป็นองค์กรที่อยากสร้างผลิตภัณฑ์เจ๋งๆ ส่งไปยังผู้ใช้
@@ -272,7 +272,10 @@
                         ไม่มีลำดับชั้นของพนักงาน มีแค่ตำแหน่งที่ใช้ทำงาน  
                     </li>
                     <li>
-                        ไม่ใส่สูทผูกไท้ ไปทำงาน
+                        ไม่จำเป็นต้องใส่สูทผูกไท้ ไปทำงาน
+                    </li>
+                    <li>
+                        ให้ความสำคัญกับการเรียนรู้ และการทดลองสิ่งใหม่ๆ ของพนักงาน
                     </li>
                     <li>
                         เรื่องงานถึงไหนถึงกัน
@@ -404,7 +407,7 @@
                             Google / Facebook API
                         </li>
                         <li>
-                            iReport / Jasper Report
+                            iReport / Jasper Report <a href="http://na5cent.blogspot.com/2013/04/send-image-to-jasper-report-java.html">ตัวอย่าง</a>
                         </li>
                         <li>
                             Linux Ubuntu Server <a href="http://na5cent.blogspot.com/2013/11/apache-hadoop-121-multi-node-cluster.html">ตัวอย่าง</a>
@@ -503,12 +506,22 @@
                     </li>
                     <li>
                         กระโดดบันจี้จั๊ม <img class="jpm-checked" src="static/image/checked.png"/>
+                        <ul>
+                            <li>
+                                อะดรีนาลีนสูบฉีดมากๆ 
+                            </li>
+                        </ul>
                     </li>
                     <li>
                         ไปเที่ยวที่ Machu Picchu ประเทศเปรู
                     </li>
                     <li>
                         ไปสำนักงานใหญ่ Google
+                        <ul>
+                            <li>
+                                Google เป็นแรงบรรดาลใจแรกของผม
+                            </li>
+                        </ul>
                     </li>
                 </ul>
                 <h3>Social / Profile / <span>ข้อมูลการติดต่อ อื่นๆ</span></h3>
@@ -539,16 +552,16 @@
         <script type="text/javascript" src="static/js/moment.js"></script> 
         <script>
 
-                             (function scope($) {
+                             (function scope($, mm) {
                                  $(function ready() {
 
-                                     moment.locale('th');
+                                     mm.locale('th');
 
                                      $('.jpm-fromnow').each(function () {
                                          var $fromnow = $(this);
                                          var dateStr = $fromnow.attr('data-date-start');
 
-                                         var date = moment(new Date(dateStr));
+                                         var date = mm(new Date(dateStr));
                                          $fromnow.html(date.fromNow(true));
                                      });
 
@@ -557,7 +570,7 @@
                                      });
 
                                  });
-                             })(jQuery);
+                             })(jQuery, moment);
         </script>
     </body>
 </html>
