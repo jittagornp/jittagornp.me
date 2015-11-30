@@ -548,29 +548,29 @@
             </div>
         </div>
 
-        <script type="text/javascript" src="static/js/jquery.js"></script>
-        <script type="text/javascript" src="static/js/moment.js"></script> 
+        <script type="text/javascript" src="static/js/jquery.min.js"></script>
+        <script type="text/javascript" src="static/js/moment.min.js"></script> 
         <script>
 
-                             (function scope($, mm) {
-                                 $(function ready() {
+            (function scope($, mm) {
+                $(function ready() {
 
-                                     mm.locale('th');
+                    mm.locale('th');
 
-                                     $('.jpm-fromnow').each(function () {
-                                         var $fromnow = $(this);
-                                         var dateStr = $fromnow.attr('data-date-start');
+                    $('.jpm-fromnow').each(function () {
+                        var $fromnow = $(this);
+                        var dateStr = $fromnow.attr('data-date-start');
 
-                                         var date = mm(new Date(dateStr));
-                                         $fromnow.html(date.fromNow(true));
-                                     });
+                        var date = mm(new Date(dateStr));
+                        $fromnow.html(date.fromNow(true));
+                    });
 
-                                     $('a').each(function () {
-                                         $(this).attr('target', '_blank');
-                                     });
+                    $('a').each(function () {
+                        $(this).attr('target', '_blank');
+                    });
 
-                                 });
-                             })(jQuery, moment);
+                });
+            })(jQuery, moment);
         </script>
     </body>
 </html>
