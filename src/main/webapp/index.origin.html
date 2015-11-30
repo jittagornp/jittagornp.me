@@ -44,6 +44,15 @@
 
             a{
                 color : #3297fd;
+                padding: 1px 5px;
+                display: inline-block;
+                margin-bottom: 2px;
+                border-radius: 2px;
+            }
+            
+            a:hover,
+            a:active{
+                background-color: #f2f2f2;
             }
 
             h3{
@@ -99,7 +108,7 @@
                 padding: 0px 3px;
                 display: inline-block;
                 margin: 0 3px;
-                background-color: #eee;
+                background-color: #f2f2f2;
 
                 border-radius: 3px;
                 -moz-border-radius: 3px;
@@ -552,25 +561,25 @@
         <script type="text/javascript" src="static/js/moment.min.js"></script> 
         <script>
 
-            (function scope($, mm) {
-                $(function ready() {
+                             (function scope($, mm) {
+                                 $(function ready() {
 
-                    mm.locale('th');
+                                     mm.locale('th');
 
-                    $('.jpm-fromnow').each(function () {
-                        var $fromnow = $(this);
-                        var dateStr = $fromnow.attr('data-date-start');
+                                     $('.jpm-fromnow').each(function () {
+                                         var $fromnow = $(this);
+                                         var dateStr = $fromnow.attr('data-date-start');
 
-                        var date = mm(new Date(dateStr));
-                        $fromnow.html(date.fromNow(true));
-                    });
+                                         var date = mm(new Date(dateStr));
+                                         $fromnow.html(date.fromNow(true));
+                                     });
 
-                    $('a').each(function () {
-                        $(this).attr('target', '_blank');
-                    });
+                                     $('a').each(function () {
+                                         $(this).attr('target', '_blank');
+                                     });
 
-                });
-            })(jQuery, moment);
+                                 });
+                             })(jQuery, moment);
         </script>
     </body>
 </html>
