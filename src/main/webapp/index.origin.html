@@ -12,7 +12,7 @@
         <meta property="og:image" content="https://rawgit.com/jittagornp/jittagornp.me/master/src/main/webapp/static/image/me.jpg" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <style>
+        <style type="text/css">
             *{
                 -webkit-box-sizing:border-box;
                 -moz-box-sizing:border-box;
@@ -49,7 +49,7 @@
                 margin-bottom: 5px;
                 border-radius: 2px;
             }
-            
+
             a:hover,
             a:active{
                 background-color: #f2f2f2;
@@ -252,7 +252,7 @@
                         เป็น Outsource ของบริษัท  Ascend <span>(True Company)</span>
                     </li>
                 </ul>
-                <h3>ทัศนะคติ</h3>
+                <h3>คติประจำใจ</h3>
                 <blockquote>
                     ไม่มีอะไรเป็นไปไม่ได้ <span>(impossible is nothing.)</span>
                 </blockquote>
@@ -442,6 +442,60 @@
                         </li>
                     </ul>
                 </div>
+                <h3>
+                    แล้วใช้ tools ต่างๆ ทำอะไรบ้าง
+                </h3>
+                <p>
+                    ตอนนี้ผมทำผลงานตัวเองอยู่ครับ  โดยเขียน code เองทั้งหมดเลย  ตั้งแต่หน้าบ้าน  <span class="jpm-highlight">(front end)</span>  
+                    ยันหลังบ้าน <span class="jpm-highlight">(back end)</span> 
+                    design database ถ่ายภาพ แต่งภาพ <span class="jpm-highlight">photoshop</span> เองทั้งหมดครับ
+                </p>
+                <p>
+                    หน้าบ้านผมใช้ <span class="jpm-highlight">angularjs</span>
+                    หลังบ้านเป็น <span class="jpm-highlight">SpringMVC</span>
+                    และ database เป็น <span class="jpm-highlight">Mysql</span> 
+
+                    เขียน code แบบ <span class="jpm-highlight">stateless</span> 
+                    คือไม่ใช้ session (ใช้ <span class="jpm-highlight">token</span> แทน) เพราะต้องการการ scale-out ที่ใหญ่มากๆ 
+                    ไม่ว่าจะเอาไป run บน computer กี่เครื่องๆ ก็สามารถทำงานได้สบายๆ ครับ
+                    มาดูรายละเอียด (details) แต่ละส่วนกัน
+                </p>
+                <h4>Front end (isomorphic)</h4>
+                <a href="javascript:void(0)">angularjs</a>
+                <p>
+                    ผมเขียนใน mode <span class="jpm-highlight">html5</span> ครับ  คือใช้ 
+                    <span class="jpm-highlight">push state</span> ของ history api มา control การเปลี่ยน page
+                    (จริงๆ ก็ใช้แค่ <span class="jpm-highlight">ui-router</span> ซึ่งเป็น module หนึ่งของ angularjs) 
+                    ทำให้เวลาเปลี่ยน page ระบบไม่เกิดการ refresh หน้าเว็บ  และที่สำคัญคือรองรับ url จริง เช่น <span class="jpm-highlight">/+jittagornp</span> 
+                    ไม่เหมือนกับ <span class="jpm-highlight">#/+jittagornp</span> ที่หลายๆ คนเขียน เวลาที่เรา refresh browser
+                    มันก็ยังอยู่หน้าเดิม  ได้ content เหมือนเดิม พูดง่ายๆ ก็คือเป็นการเขียน  angularjs ที่รองรับการทำ 
+                    <span class="jpm-highlight">SEO</span> (Search Engine Optimization) นั่นเอง
+                </p>
+                <a href="javascript:void(0)">lesscss</a>
+                <p>
+                    ตัว css ผมใช้ less เข้ามาช่วยอำนวยสะดวกในการเขียน code
+                    เพื่อให้เราสามารถเขียน css ได้ง่ายขึ้น สะดวกขึ้น ที่สำคัญคือ reuse ใช้ของเดิมได้
+                    (เขียนเป็น function และตัวแปรต่างๆ เพื่อเรียกใช้งานในภายหลัง)
+                </p>
+                <a href="javascript:void(0)">jasmine.js</a>
+                <p>
+                    เวลาเขียน code แล้วมี test ครอบ นี่มันทำให้เรามั่นใจในการเขียน code เอามากๆ  กล้าเปลี่ยน กล้าแก้ กล้ารื้อ  โดยไม่กลัวอะไรเลย
+                    ต่อให้กระทบ  ก็ยังรู้ว่ากระทบส่วนไหน  และต้องแก้ยังไงให้ logic กลับมาถูกเหมือนเดิม
+                    ซึ่งผมก็ใช้หลัก TDD เข้ามาช่วย  เวลาที่ต้องเขียน logic อะไรที่มันซับซ้อนๆ  / ยาก
+                    คิดไม่ออกนี่ร่าง tdd ก่อนเลย  แล้ว logic มันจะวิ่งตามทางของมันเองครับ
+                </p>
+                <a href="javascript:void(0)">grunt.js</a>
+                <ul>
+                    <li>
+                        ไว้รวมไฟล์  (เพราะผมเขียน angularjs เป็น module ละ 1 ไฟล์) 
+                    </li>
+                    <li>
+                        ไว้ run task ต่าง ๆ  ที่เราต้อง run บ่อยๆ เช่น automate test (jasmine) 
+                    </li>
+                    <li>
+                        ไว้บีบอัด/เข้ารัหัส (compress) ไฟล์ hml/css/js เป็นต้น
+                    </li>
+                </ul>
                 <h3>ความสนใจอื่นๆ</h3>
                 <ul>
                     <li>
@@ -560,7 +614,7 @@
 
         <script type="text/javascript" src="static/js/jquery.min.js"></script>
         <script type="text/javascript" src="static/js/moment.min.js"></script> 
-        <script>
+        <script type="text/javascript">
 
                              (function scope($, mm) {
                                  $(function ready() {
