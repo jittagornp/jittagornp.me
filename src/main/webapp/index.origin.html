@@ -56,7 +56,12 @@
                 text-decoration: none;
             }
 
-            h3{
+            a[href^=javascript]{
+                color : #B1B1B1 !important;
+            }
+
+            h3,
+            h4{
                 margin-top: 40px;
             }
 
@@ -108,7 +113,7 @@
             .jpm-highlight{
                 padding: 0px 3px;
                 display: inline-block;
-                margin: 0 3px;
+                margin: 1px 3px;
                 background-color: #f2f2f2;
 
                 border-radius: 3px;
@@ -443,27 +448,27 @@
                     </ul>
                 </div>
                 <h3>
-                    แล้วใช้ tools ต่างๆ ทำอะไรบ้าง
+                    แล้วใช้ Tools / Skills ต่างๆ ทำอะไรบ้าง
                 </h3>
                 <p>
-                    ตอนนี้ผมทำผลงานตัวเองอยู่ครับ  โดยเขียน code เองทั้งหมดเลย  ตั้งแต่หน้าบ้าน  <span class="jpm-highlight">(front end)</span>  
-                    ยันหลังบ้าน <span class="jpm-highlight">(back end)</span> 
-                    design database ถ่ายภาพ แต่งภาพ <span class="jpm-highlight">photoshop</span> เองทั้งหมดครับ
+                    ตอนนี้ผมทำผลงานตัวเองอยู่ครับ  โดยเขียน code เองทั้งหมดเลย  ตั้งแต่หน้าบ้าน  <span class="jpm-highlight">(Front end)</span>  
+                    ยันหลังบ้าน <span class="jpm-highlight">(Back end)</span> 
+                    Design database ถ่ายภาพ แต่งภาพ <span class="jpm-highlight">Photoshop</span> เองทั้งหมด
                 </p>
                 <p>
-                    หน้าบ้านผมใช้ <span class="jpm-highlight">angularjs</span>
+                    หน้าบ้านใช้ <span class="jpm-highlight">angularjs</span>
                     หลังบ้านเป็น <span class="jpm-highlight">SpringMVC</span>
                     และ database เป็น <span class="jpm-highlight">Mysql</span> 
 
-                    เขียน code แบบ <span class="jpm-highlight">stateless</span> 
-                    คือไม่ใช้ session (ใช้ <span class="jpm-highlight">token</span> แทน) เพราะต้องการการ scale-out ที่ใหญ่มากๆ 
-                    ไม่ว่าจะเอาไป run บน computer กี่เครื่องๆ ก็สามารถทำงานได้สบายๆ ครับ
-                    มาดูรายละเอียด (details) แต่ละส่วนกัน
+                    เขียน code แบบ <span class="jpm-highlight">Stateless</span> 
+                    คือไม่ใช้ session ในการ control (ใช้ <span class="jpm-highlight">token</span> แทน) เพราะต้องการการ scale-out ที่ใหญ่มากๆ 
+                    ไม่ว่าจะเอาไป run บน computer กี่เครื่องๆ ก็สามารถทำงานได้แบบสบายๆ ครับ
+                    มาดูรายละเอียด (details) ในแต่ละส่วนกัน
                 </p>
-                <h4>Front end (isomorphic)</h4>
-                <a href="javascript:void(0)">angularjs</a>
+                <h4>Front end (Isomorphic)</h4>
+                <a href="javascript:void(0)">AngularJS</a>
                 <p>
-                    ผมเขียนใน mode <span class="jpm-highlight">html5</span> ครับ  คือใช้ 
+                    ผมเขียน angularjs + routing ใน mode <span class="jpm-highlight">html5</span> ใช้คุณสมบัติ 
                     <span class="jpm-highlight">push state</span> ของ history api มา control การเปลี่ยน page
                     (จริงๆ ก็ใช้แค่ <span class="jpm-highlight">ui-router</span> ซึ่งเป็น module หนึ่งของ angularjs) 
                     ทำให้เวลาเปลี่ยน page ระบบไม่เกิดการ refresh หน้าเว็บ  และที่สำคัญคือรองรับ url จริง เช่น <span class="jpm-highlight">/+jittagornp</span> 
@@ -471,31 +476,67 @@
                     มันก็ยังอยู่หน้าเดิม  ได้ content เหมือนเดิม พูดง่ายๆ ก็คือเป็นการเขียน  angularjs ที่รองรับการทำ 
                     <span class="jpm-highlight">SEO</span> (Search Engine Optimization) นั่นเอง
                 </p>
-                <a href="javascript:void(0)">lesscss</a>
+                <a href="javascript:void(0)">Lesscss</a>
                 <p>
-                    ตัว css ผมใช้ less เข้ามาช่วยอำนวยสะดวกในการเขียน code
-                    เพื่อให้เราสามารถเขียน css ได้ง่ายขึ้น สะดวกขึ้น ที่สำคัญคือ reuse ใช้ของเดิมได้
+                    ตัว <span class="jpm-highlight">css</span> ผมใช้ <span class="jpm-highlight">less</span> เข้ามาช่วยอำนวยสะดวกในการเขียน code
+                    เพื่อให้เราสามารถเขียน css ได้ง่ายขึ้น สะดวกขึ้น และที่สำคัญคือ reuse ใช้ของเดิมได้
                     (เขียนเป็น function และตัวแปรต่างๆ เพื่อเรียกใช้งานในภายหลัง)
                 </p>
-                <a href="javascript:void(0)">jasmine.js</a>
+                <a href="javascript:void(0)">Jasmine.js</a>
                 <p>
-                    เวลาเขียน code แล้วมี test ครอบ นี่มันทำให้เรามั่นใจในการเขียน code เอามากๆ  กล้าเปลี่ยน กล้าแก้ กล้ารื้อ  โดยไม่กลัวอะไรเลย
-                    ต่อให้กระทบ  ก็ยังรู้ว่ากระทบส่วนไหน  และต้องแก้ยังไงให้ logic กลับมาถูกเหมือนเดิม
-                    ซึ่งผมก็ใช้หลัก TDD เข้ามาช่วย  เวลาที่ต้องเขียน logic อะไรที่มันซับซ้อนๆ  / ยาก
-                    คิดไม่ออกนี่ร่าง tdd ก่อนเลย  แล้ว logic มันจะวิ่งตามทางของมันเองครับ
+                    เวลาเขียน code แล้วมี Test ครอบ มันทำให้เรามั่นใจในการเขียน code เอามากๆ  กล้าเปลี่ยน กล้าแก้ กล้ารื้อ  โดยที่กลัวเลย
+                    ต่อให้กระทบ  ก็ยังรู้ว่ากระทบส่วนไหน (เพราะ Test Fail) ถ้าแก้ต้องแก้ยังไงให้ logic กลับมาถูกเหมือนเดิม
+                    ผมก็ใช้หลัก <span class="jpm-highlight">TDD</span> (Test Driven Development) เข้ามาช่วย  เวลาที่ต้องเขียน logic อะไรที่มันซับซ้อน  / ยาก
+                    คิดไม่ออกนี่ร่าง TDD ก่อนเลยครับ  แล้ว logic มันจะวิ่งตามทางของมันเอง
                 </p>
-                <a href="javascript:void(0)">grunt.js</a>
+                <a href="javascript:void(0)">Grunt.js</a>
                 <ul>
                     <li>
-                        ไว้รวมไฟล์  (เพราะผมเขียน angularjs เป็น module ละ 1 ไฟล์) 
+                        ไว้รวมไฟล์  (เพราะผมเขียน angularjs เป็นโมดูล (Module) โมดูลละ 1 ไฟล์) 
                     </li>
                     <li>
-                        ไว้ run task ต่าง ๆ  ที่เราต้อง run บ่อยๆ เช่น automate test (jasmine) 
+                        ไว้ run task ต่าง ๆ  ที่เราต้อง run บ่อยๆ เช่น <span class="jpm-highlight">Automate Test</span> (jasmine) 
                     </li>
                     <li>
-                        ไว้บีบอัด/เข้ารัหัส (compress) ไฟล์ hml/css/js เป็นต้น
+                        ไว้บีบอัด/เข้ารหัส (Compress) ไฟล์ hml/css/javascript เป็นต้น
+                    </li>
+                    <li>
+                        Code Profile นี้ก็ใช้ Grunt ครับ  (ลอง Click ขวา View Source ดู)
                     </li>
                 </ul>
+                <h4>
+                    Back end (Restful API)
+                </h4>
+                <a href="javascript:void(0)">SpringMVC</a>
+                <p>
+                    ผมเอาไว้ทำ Restful API และใช้ทำ URL Mapping สวยๆ  
+                    เช่น <span class="jpm-highlight">/+jittagornp</span> <span class="jpm-highlight">/@pookradueng</span> 
+                    ที่เลือกใช้ SpringMVC ก็คงหนีไม่พ้นคำตอบเรื่อง <span class="jpm-highlight">DI</span> (Dependency Injection) ครับ  Spring ใช้สะดวกมากๆ 
+                    และการรองรับ Libraries อื่นๆ ที่ spring support ค่อนข้างครบคลุม
+                    ผมใช้มา <span class="jpm-highlight jpm-fromnow" data-date-start="2012/04/30">... ปี</span> ล่ะ  ชอบมากครับ
+                </p>
+                <a href="javascript:void(0)">EclipseLink / Hibernate</a>
+                <p>
+                    JPA (Java Persistence API) 2 ตัว (ไว้ทำ ORM (Object Relational Mapping)) 
+                    แล้วแต่ว่างานไหนจะเลือกใช้ตัวไหนครับ ต้องการความเรียบง่าย  ใช้ง่าย ผมเลือก EclipseLink 
+                    แต่ถ้าเป็นงานที่ต้องการ Feature เยอะๆ ซับซ้อนๆ ผมเลือก Hibernate (ลูกเล่นมันเยอะกว่า แต่ใช้ยากกว่า) บางทีก็มีผสมกันครับ
+                </p>
+                <a href="javascript:void(0)">JUnit / Mockito</a>
+                <p>
+                    ทั้ง JUnit และ Mockito ต่างเอาไว้เขียน Test 
+                    โดยเฉพาะ <span class="jpm-highlight">Mockito</span> ที่เอาไว้จำลอง และทดสอบพฤติกรรมของ Code  ได้ 
+                    ในบางครั้งเราไม่รู้ว่า Code ปลายทาง หรือ implementation จริงๆ เป็นยังไง  เรารู้แค่หน้าตาภายนอก  (หรือ interface) 
+                    เราสามารถ Mock Code ขึ้นมาแล้วกำหนดพฤติกรรมของ Code ได้โดยการใช้ Mockito
+                </p>
+                <a href="javascript:void(0)">JWT (Json Web Token)</a>
+                <p>
+                    เอามาใช้แทน session 
+                    ที่เลือกใช้ <a href="http://na5cent.blogspot.com/2015/02/jwt-json-web-token.html">JWT</a> เพราะมันไม่ต้องเก็บ state ไว้ที่  Back end ครับ
+                    มันใช้หลักการ <span class="jpm-highlight">Sign</span> / <span class="jpm-highlight">Verify</span> Signature 
+                    ซึ่งถ้า Verify ผ่าน และข้อมูลสิทธิ์ที่เราเก็บไว้ใน token 
+                    มัน match กับที่ API Required ก็แสดงว่าคุณมีสิทธิ์เข้าถึง Resources นั้นๆ  
+                    เป็นวิธีการที่ผมชอบมากๆ   เคยเรียน <span class="jpm-highlight">Digital Signature</span> มา  อ่าน JWT แล้วชอบเลย
+                </p>
                 <h3>ความสนใจอื่นๆ</h3>
                 <ul>
                     <li>
