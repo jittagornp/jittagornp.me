@@ -3,7 +3,7 @@
 profile of jittagornp <br/>
 page : http://jittagornp.me/
 
-## How to use
+## How to use (Linux Ubuntu Server)
 1) install java
 ```shell
 $ sudo apt-get install python-software-properties
