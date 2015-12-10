@@ -30,7 +30,7 @@ $ sudo api-get install git
 ```shell
 $ mkdir me
 $ cd me
-$ get init
+$ git init
 $ git pull https://github.com/jittagornp/jittagornp.me.git master
 ```
 6) build & run spring-boot
