@@ -26,15 +26,22 @@ import javax.servlet.http.HttpServletResponse;
 public class CacheFilter implements Filter {
 
     private String etag;
-    private Date lastModified;
-    private long expires;
-    private int maxAge = 1000 * 60 * 30;
+    private long lastModified;
+    private long expires = 0;
+    private final int maxAge = 1000 * 60 * 30;
 
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
-        etag = UUID.randomUUID().toString();
-        lastModified = new Date();
-        expires = lastModified.getTime() + maxAge;
+
+    }
+
+    private void resetExpires() {
+        long current = System.currentTimeMillis();
+        if (current > expires) {
+            etag = UUID.randomUUID().toString();
+            lastModified = current;
+            expires = current + maxAge;
+        }
     }
 
     @Override
@@ -43,8 +50,10 @@ public class CacheFilter implements Filter {
         HttpServletRequest request = (HttpServletRequest) req;
         HttpServletResponse response = (HttpServletResponse) resp;
 
+        resetExpires();
+
         response.addHeader("etag", etag);
-        response.addDateHeader("last-modified", lastModified.getTime());
+        response.addDateHeader("last-modified", lastModified);
         response.addDateHeader("expires", expires);
         response.addHeader("cache-control", "public, max-age=" + maxAge);
 
