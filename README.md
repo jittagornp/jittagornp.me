@@ -16,7 +16,7 @@ $ sudo apt-get install oracle-java8-installer
 $ sudo api-get install vim
 $ sudo vi /etc/environment
 ```
-add JAVA_HOME=[java path such as /usr/lib/jvm/java-8-oracle]
+add ```JAVA_HOME=[java path such as /usr/lib/jvm/java-8-oracle]``` to bottom page
 
 3) install maven
 ```shell
