@@ -26,7 +26,7 @@
                 margin: 0;
                 color : #444;
                 font-size: 12pt;
-                line-height: 24px;
+                line-height: 28px;
                 font-family: arial, sans-serif;
             }
 
@@ -91,6 +91,7 @@
                 position: relative;
                 left: 50%;
                 margin-left: -100px;
+                border: solid 1px #ccc;
             }
 
             .jpm-photo img{
@@ -111,7 +112,52 @@
                 font-style: italic;
             }
 
+            .jpm-skill-logo{
+                width: 325px;
+                position: relative;
+                left: 50%;
+                margin-left: -163px;
+                margin-top: 40px;
+                margin-bottom: 40px;
+                border-top: solid 1px #eee;
+                border-bottom: solid 1px #eee;
+            }
+
+            .jpm-skill-logo-item{
+                width: 50px;
+                height: 50px;
+                float: left;
+                margin-left: 5px;
+                margin-bottom: 5px;
+            }
+
+            .jpm-skill-con{
+                width: 32px;
+                height: 32px;
+                display: inline-block;
+                position: relative;
+                top: 10px;
+                margin-bottom: 15px;
+                margin-right: 10px;
+            }
+
+            .jpm-skill-con img{
+                width: 100%;
+            }
+
+            .jpm-skill-logo .jpm-skill-logo-item:first-child{
+                margin-left: 0;
+            }
+
+            .jpm-skill-logo-item img{
+                vertical-align: middle;
+                width: 100%;
+            }
+
             .jpm-highlight{
+
+                line-height: 22px;
+
                 padding: 0px 3px;
                 display: inline-block;
                 margin: 1px 3px;
@@ -205,8 +251,10 @@
                 border-radius: 8px;
                 -moz-border-radius: 8px;
                 -webkit-border-radius: 8px;
+                position: relative;
+                top: 3px;
             }
-            
+
             .jpm-display-time{
                 background-color: #f2f2f2;
                 font-size: 9pt;
@@ -230,8 +278,35 @@
                 </div>
                 <h1 class="jpm-name">จิตกร พิทักษ์เมธากุล</h1>
                 <div class="jpm-aboutme">"i am programmer."</div>
+                <div class="jpm-skill-logo">
+                    <div class="jpm-skill-logo-item">
+                        <img src="static/image/skill-logo/java.png"
+                             style="margin-top: 3px;"/>
+                    </div>
+                    <div class="jpm-skill-logo-item">
+                        <img src="static/image/skill-logo/hibernate.png"
+                             style="margin-top: 2px;"/>
+                    </div>
+                    <div class="jpm-skill-logo-item">
+                        <img src="static/image/skill-logo/spring.png"
+                             style="margin-top: 12px;"/>
+                    </div>
+                    <div class="jpm-skill-logo-item">
+                        <img src="static/image/skill-logo/angularjs.png"
+                             style="margin-top: 4px;"/>
+                    </div>
+                    <div class="jpm-skill-logo-item">
+                        <img src="static/image/skill-logo/nginx.png"
+                             style="margin-top: 22px;"/>
+                    </div>
+                    <div class="jpm-skill-logo-item">
+                        <img src="static/image/skill-logo/git.jpg"
+                             style="margin-top: 5px;"/>
+                    </div>
+                    <div class="jpm-clear"></div>
+                </div>
                 <div class="jpm-status">
-                    <span style="color: #999">ตอนนี้อยู่ในช่วงกำลังหางานทำที่เชียงใหม่</span>
+                    <span style="color: #999">ตอนนี้ทำผลงานตัวเองอยู่ที่เชียงใหม่</span>
                     <p>
                         ภาคเหนือ  เป็นภาคที่ผมไม่เคยไปเลยสักครั้งในชีวิต  
                         แต่ก็มีความใฝ่ฝันมานานแล้ว  ว่าอยากจะไปใช้ชีวิตอยู่ที่นั่นสักระยะนึง
@@ -243,15 +318,18 @@
                 </div>
             </div>
             <div class="jpm-body">
-                <blockquote>
-                    ผมชื่นชมคนที่มีผลงานเป็นของตัวเองมากกว่าคนที่มี Certificate
-                </blockquote>
                 <p style="margin-top: 40px;">
                     ชื่อ<span class="jpm-highlight">เดียร์</span>ครับ อายุ <span class="jpm-highlight jpm-fromnow" data-date-start="1989/07/21">... ปี</span> เป็นโปรแกรมเมอร์    
                     ทำงานมาได้ <span class="jpm-highlight jpm-fromnow" data-date-start="2012/04/30">... ปี</span> ล่ะ 
                     ตั้งแต่เรียนจบปี <span class="jpm-highlight">2555 (2012)</span> ที่มหาวิทยาลัยรามคำแหง (คณะวิศวกรรมศาสตร์ สาขาวิศวกรรมคอมพิวเตอร์)
                     จบมาก็มาเป็นโปรแกรมเมอร์เลย  ในตำแหน่ง Java Developer ตอนนี้ก็ยังเป็น Java Dev อยู่ เพราะรู้สึกหลงใหลในอาชีพและภาษานี้
                 </p>
+                <h3>ผลงาน</h3>
+                <ul>
+                    <li>
+                        <a href="http://pamarin.com" target="_blank">pamarin.com</a>
+                    </li>
+                </ul>
                 <h3>เคยทำอะไรที่ไหนมาบ้าง</h3>
                 <ul>
                     <li>
@@ -331,7 +409,14 @@
                     ซึ่งก็ทำเป็นประมาณนี้
                 </p>
                 <div class="jpm-skill">
-                    <h3 style="margin-top: 15px">Front end</h3>
+                    <h3 style="margin-top: 5px">
+
+                        <span class="jpm-skill-con">
+                            <img src="static/image/skill-icon/frontend.png"/>
+                        </span>
+
+                        Front end
+                    </h3>
                     <ul class="jpm-skill-block">
                         <li>
                             Html
@@ -356,7 +441,7 @@
                                     jQuery <a href="https://gist.github.com/jittagornp/d2b9ac4e6b8935ed08f0">ตัวอย่าง</a>
                                 </li>
                                 <li>
-                                    AngularJS <a href="https://github.com/jittagornp/pamarin-angularjs">ตัวอย่าง</a>
+                                    AngularJS 
                                 </li>
                                 <li>
                                     MomentJS 
@@ -371,7 +456,14 @@
                         </li>
                     </ul>
 
-                    <h3>Back end</h3>
+                    <h3>
+
+                        <span class="jpm-skill-con">
+                            <img src="static/image/skill-icon/backend.png"/>
+                        </span>
+
+                        Back end
+                    </h3>
                     <ul class="jpm-skill-block">
                         <li>
                             Java
@@ -420,7 +512,14 @@
                             PL/SQL (Oracle)  <a href="http://na5cent.blogspot.com/2014/06/oracle-plsql-backup-data.html">ตัวอย่าง</a>
                         </li>
                     </ul>
-                    <h3>Test tools</h3>
+                    <h3>
+
+                        <span class="jpm-skill-con">
+                            <img src="static/image/skill-icon/test.png"/>
+                        </span>
+
+                        Test tools
+                    </h3>
                     <ul class="jpm-skill-block">
                         <li>
                             JUnit
@@ -440,7 +539,14 @@
                         </li>
                         -->
                     </ul>
-                    <h3>Other</h3>
+                    <h3>
+
+                        <span class="jpm-skill-con">
+                            <img src="static/image/skill-icon/other.png"/>
+                        </span>
+
+                        Other
+                    </h3>
                     <ul class="jpm-skill-block">
                         <li>
                             Google / Facebook API
@@ -456,6 +562,9 @@
                             Jenkins
                         </li>
                         -->
+                        <li>
+                            Nginx
+                        </li>
                         <li>
                             Git
                         </li>
