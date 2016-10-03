@@ -271,6 +271,86 @@
                 margin-left: 10px;
                 color : #777;
             }
+
+            .jpm-lifestyle{
+                display: block;
+                text-align: center;
+            }
+
+            .jpm-lifestyle > div{
+                background-color: #f1f1f1;
+                width: 181px;
+                height: 180px;
+                margin-left: 20px;
+                display: inline-block;
+            }
+
+            .jpm-lifestyle > div:first-child{
+                margin-left: 0px;
+            }
+
+            .jpm-lifestyle > div img{
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+
+            @media(max-width : 849px) {
+
+                .jpm-lifestyle > div{
+                    width: 170px;
+                    height: 170px;
+                    margin-left: 15px;
+                }
+
+            }
+
+            @media(max-width : 800px) {
+
+                .jpm-lifestyle > div{
+                    width: 150px;
+                    height: 150px;
+                    margin-left: 10px;
+                }
+
+            }
+
+            @media(max-width : 700px) {
+
+                .jpm-lifestyle > div{
+                    width: 130px;
+                    height: 130px;
+                }
+
+            }
+
+            @media(max-width : 650px) {
+
+                .jpm-lifestyle > div{
+                    width: 110px;
+                    height: 110px;
+                }
+
+            }
+
+            @media(max-width : 550px) {
+
+                .jpm-lifestyle > div{
+                    width: 90px;
+                    height: 90px;
+                }
+
+            }
+            
+            @media(max-width : 500px) {
+
+                .jpm-lifestyle > div{
+                    width: 70px;
+                    height: 70px;
+                    margin-left: 5px;
+                }
+
+            }
         </style>
     </head>
     <body>
@@ -310,17 +390,12 @@
                     </div>
                     <div class="jpm-clear"></div>
                 </div>
+                <!--
                 <div class="jpm-status">
-                    <span style="color: #999">ตอนนี้ทำผลงานตัวเองอยู่ที่เชียงใหม่</span>
-                    <p>
-                        ภาคเหนือ  เป็นภาคที่ผมไม่เคยไปเลยสักครั้งในชีวิต  
-                        แต่ก็มีความใฝ่ฝันมานานแล้ว  ว่าอยากจะไปใช้ชีวิตอยู่ที่นั่นสักระยะนึง
-                        ที่เลือกจะไปอยู่เชียงใหม่  เพราะคิดว่าเชียงใหม่ เป็นเมืองที่มีความใกล้เคียงกับกรุงเทพมากที่สุด
-                        แต่ก็มีความคลาสสิกในวัฒนธรรม  ผมชอบภูเขา  ผมชอบการเดินทาง  
-                        เลยคิดว่าเชียงใหม่น่าจะตอบโจทย์วิถีชีวิตของตัวเองได้ดีที่สุดในตอนนี้ครับ
-
-                    </p>
+                    <span style="color: #999"></span>
+                    <p></p>
                 </div>
+                -->
             </div>
             <div class="jpm-body">
                 <p style="margin-top: 40px;">
@@ -329,6 +404,21 @@
                     ตั้งแต่เรียนจบปี <span class="jpm-highlight">2555 (2012)</span> ที่มหาวิทยาลัยรามคำแหง (คณะวิศวกรรมศาสตร์ สาขาวิศวกรรมคอมพิวเตอร์)
                     จบมาก็มาเป็นโปรแกรมเมอร์เลย  ในตำแหน่ง Java Developer ตอนนี้ก็ยังเป็น Java Dev อยู่ เพราะรู้สึกหลงใหลในอาชีพและภาษานี้
                 </p>
+                <div class="jpm-lifestyle">
+                    <div>
+                        <img src="static/image/lifestyle/1.jpg" onclick="window.open(this.src, 'life style')"/>
+                    </div>
+                    <div>
+                        <img src="static/image/lifestyle/2.jpg" onclick="window.open(this.src, 'life style')"/>
+                    </div>
+                    <div>
+                        <img src="static/image/lifestyle/3.jpg" onclick="window.open(this.src, 'life style')"/>
+                    </div>
+                    <div>
+                        <img src="static/image/lifestyle/4.jpg" onclick="window.open(this.src, 'life style')"/>
+                    </div>
+                </div>
+                <div class="jpm-clear"></div>
                 <h3>ผลงาน</h3>
                 <ul>
                     <li>
@@ -522,7 +612,7 @@
                             <img src="static/image/skill-icon/test.png"/>
                         </span>
 
-                        Test tools
+                        Test & Analysis tools
                     </h3>
                     <ul class="jpm-skill-block">
                         <li>
@@ -532,19 +622,26 @@
                             Mockito <a href="https://github.com/jittagornp/security-api/blob/master/src/test/java/com/pamarin/security/api/interceptor/AccessTokenHandlerInterceptorTest.java">ตัวอย่าง</a>
                         </li>
                         <li>
+                            Powermock
+                        </li>
+                        <li>
+                            Cucumber (BDD : Behavior Driven Development)
+                        </li>
+                        <li>
                             Jasmine (Javascript Test Framework) <a href="https://github.com/jittagornp/jasmine-example">ตัวอย่าง</a>
                         </li>
                         <li>
                             Gatling Load Test Framework (Performance Testing)<a href="https://github.com/jittagornp/gatling-example">ตัวอย่าง</a>
                         </li>
                         <li>
-                            Sonar Qube (Code Review)
+                            SonarQube (Code Review)
                         </li>
-                        <!--
                         <li>
                             Robot Framework (Acceptance Test)
                         </li>
-                        -->
+                        <li>
+                            utPLSQL (Unit Test for PL/SQL)
+                        </li>
                     </ul>
                     <h3>
 
@@ -733,7 +830,7 @@
                         การเดินทางท่องเที่ยว
                         <ul>
                             <li>
-                                ธรรมชาติ / Backpack
+                                ธรรมชาติ / Backpack (สายภูเขา)
                             </li>
                         </ul>
                     </li>
@@ -820,25 +917,25 @@
         <script type="text/javascript" src="static/js/moment.min.js"></script> 
         <script type="text/javascript">
 
-                             (function scope($, mm) {
-                                 $(function ready() {
+                            (function scope($, mm) {
+                                $(function ready() {
 
-                                     mm.locale('th');
+                                    mm.locale('th');
 
-                                     $('.jpm-fromnow').each(function () {
-                                         var $fromnow = $(this);
-                                         var dateStr = $fromnow.attr('data-date-start');
+                                    $('.jpm-fromnow').each(function () {
+                                        var $fromnow = $(this);
+                                        var dateStr = $fromnow.attr('data-date-start');
 
-                                         var date = mm(new Date(dateStr));
-                                         $fromnow.html(date.fromNow(true));
-                                     });
+                                        var date = mm(new Date(dateStr));
+                                        $fromnow.html(date.fromNow(true));
+                                    });
 
-                                     $('a').each(function () {
-                                         $(this).attr('target', '_blank');
-                                     });
+                                    $('a').each(function () {
+                                        $(this).attr('target', '_blank');
+                                    });
 
-                                 });
-                             })(jQuery, moment);
+                                });
+                            })(jQuery, moment);
         </script>
     </body>
 </html>
