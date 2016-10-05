@@ -78,6 +78,26 @@
             .jpm-container{
                 margin: 0 auto; 
                 max-width: 800px;
+                position : relative;
+            }
+
+            .jpm-download-link{
+                width: 50px;
+                height: 50px;
+                position: absolute;
+                top: 0;
+                right: 0;
+                margin-top: -35px;
+                display: block;
+
+                border-radius: 25px;
+                -moz-border-radius: 25px;
+                -webkit-border-radius: 25px;
+
+                background-image: url('static/image/download-icon.png');
+                background-size: 50px;
+                background-repeat: no-repeat;
+                opacity: .3;
             }
 
             .jpm-header > *{
@@ -212,7 +232,7 @@
             }
 
             .jpm-skill{
-                border: solid 1px #e4e4e4;
+                border: solid 1px #ddd;
                 padding: 0 15px;
 
                 border-radius: 3px;
@@ -280,7 +300,7 @@
             .jpm-lifestyle > div{
                 background-color: #f1f1f1;
                 width: 181px;
-                height: 180px;
+                height: 181px;
                 margin-left: 20px;
                 display: inline-block;
             }
@@ -293,6 +313,19 @@
                 display: block;
                 width: 100%;
                 height: 100%;
+            }
+
+            .jmp-picture{
+                width: 100%;
+            }
+
+            .jmp-picture img{
+                width: 100%;
+            }
+
+            .jpm-before-die{
+                background-color: #f2f2f2;
+                padding: 10px;
             }
 
             @media(max-width : 849px) {
@@ -322,6 +355,13 @@
                     height: 130px;
                 }
 
+                p{
+                    text-indent : 50px;
+                }
+
+                ul {
+                    padding-left: 30px;
+                }
             }
 
             @media(max-width : 650px) {
@@ -340,21 +380,42 @@
                     height: 90px;
                 }
 
+                p{
+                    text-indent : 40px;
+                }
             }
-            
+
             @media(max-width : 500px) {
+
+                .jpm-lifestyle > div{
+                    width: 80px;
+                    height: 80px;
+                    margin-left: 5px;
+                }
+
+                p{
+                    text-indent : 20px;
+                }
+
+                ul {
+                    padding-left: 20px;
+                }
+            }
+
+            @media(max-width : 400px) {
 
                 .jpm-lifestyle > div{
                     width: 70px;
                     height: 70px;
-                    margin-left: 5px;
                 }
-
             }
         </style>
     </head>
     <body>
         <div class="jpm-container">
+
+            <a class="jpm-download-link" href="static/download/jittagornp.docx" title="ดาวน์โหลดฉบับย่อ"></a>
+
             <div class="jpm-header">
                 <div class="jpm-photo">
                     <img src="static/image/me_small.jpg"  
@@ -362,7 +423,7 @@
                          alt="จิตกร พิทักษ์เมธากุล"/>
                 </div>
                 <h1 class="jpm-name">จิตกร พิทักษ์เมธากุล</h1>
-                <div class="jpm-aboutme">"i am programmer."</div>
+                <div class="jpm-aboutme">"Work hard, Play hard."</div>
                 <div class="jpm-skill-logo">
                     <div class="jpm-skill-logo-item">
                         <img src="static/image/skill-logo/java.png"
@@ -425,12 +486,21 @@
                         <a href="http://pamarin.com" target="_blank">pamarin.com</a>
                     </li>
                 </ul>
+                <h3>การศึกษา</h3>
+                <ul>
+                    <li>
+                        นักศึกษาวิชาทหารชั้นปีที่ 5 โรงเรียนรักษาดินแดน กรุงเทพมหานคร ปี 2553
+                    </li>
+                    <li>
+                        ปริญญาตรี วิศวกรรมศาสตร์บัณฑิต สาขาวิศวกรรมคอมพิวเตอร์ มหาวิทยาลัยรามคำแหง ปี 2555
+                    </li>
+                </ul>
                 <h3>เคยทำอะไรที่ไหนมาบ้าง</h3>
                 <ul>
                     <li>
                         เป็น <a href="http://na5cent.blogspot.com">Blogger</a> 
                         ตั้งแต่เรียนอยู่ปี 3 
-                        <span>(ผมถือว่ามันเป็นส่วนหนึ่งในงานที่ผมรักครับ)</span>
+                        <span>(ผมถือว่ามันเป็นส่วนหนึ่งในงานที่ผมรัก)</span>
                     </li>
                     <li>
                         เป็นพนักงานบริษัทจีเนียส-ทรี จำกัด (Genius-Tree Co., Ltd.)
@@ -438,17 +508,19 @@
                     </li>
                     <li>
                         เป็นวิทยากรอบรมการเขียน Java Web Application ที่มหาวิทยาลัยรามคำแหง
+                        <span class="jpm-display-time">15 ก.พ. - 16 ก.พ. 2556</span>
                     </li>
                     <li>
                         เป็นอาจารย์พิเศษสอนที่มหาวิทยาลัยรามคำแหงเป็นเวลา 1 เทอม 
                         <span>(<a href="http://www.slideshare.net/jittagornp/1-cpe4235-2557">วิชา CPE4235</a>)</span>
-                    </li>
-                    <li>
-                        เป็น Freelance
+                        <span class="jpm-display-time">1 ธ.ค. 2557 - 31 มี.ค. 2558</span>
                     </li>
                     <li>
                         เป็น Outsource ของบริษัท  Ascend <span>(True Company)</span> 
                         <span class="jpm-display-time">1 ส.ค. - 31 ธ.ค. 2558</span>
+                    </li>
+                    <li>
+                        เป็น Freelance
                     </li>
                 </ul>
                 <h3>คติประจำใจ</h3>
@@ -466,6 +538,11 @@
                     ผมรู้ใจตัวเองตั้งแต่ก่อนเรียนจบ  ตอนนี้อยู่ในช่วงเก็บสะสมประสบการณ์ครับ  
                     แน่นอนว่ามันทำให้ผมรักในอาชีพนี้มากๆ เพราะเรารู้ว่าตัวเองต้องการอะไรในชีวิต
                 </p>
+
+                <div class="jmp-picture">
+                    <img src="static/image/biker.jpg" onclick="window.open(this.src, 'coding')"/>
+                </div>
+
                 <h3>สภาพแวดล้อมการทำงานที่ชื่นชอบเป็นพิเศษ</h3>
                 <ul>
                     <li>
@@ -586,13 +663,13 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    JPA EclipseLink / Hibernate
+                                    JPA (Java Persistence API) EclipseLink / Hibernate
                                 </li>
                                 <li>
-                                    JSP
+                                    JSP (JavaServer Page)
                                 </li>
                                 <li>
-                                    JSF Primefaces <a href="https://github.com/jittagornp/income">ตัวอย่าง</a>
+                                    JSF (JavaServer Faces) Primefaces <a href="https://github.com/jittagornp/income">ตัวอย่าง</a>
                                 </li>
                                 <li>
                                     Quartz Scheduler <a href="http://na5cent.blogspot.com/2012/09/java-cronjob-quartz-scheduler.html">ตัวอย่าง</a>
@@ -604,6 +681,9 @@
                         </li>
                         <li>
                             PL/SQL (Oracle)  <a href="http://na5cent.blogspot.com/2014/06/oracle-plsql-backup-data.html">ตัวอย่าง</a>
+                        </li>
+                        <li>
+                            Mysql
                         </li>
                     </ul>
                     <h3>
@@ -642,6 +722,9 @@
                         <li>
                             utPLSQL (Unit Test for PL/SQL)
                         </li>
+                        <li>
+                            ErrorProne (by Google)
+                        </li>
                     </ul>
                     <h3>
 
@@ -661,16 +744,14 @@
                         <li>
                             Linux Ubuntu Server <a href="http://na5cent.blogspot.com/2013/11/apache-hadoop-121-multi-node-cluster.html">ตัวอย่าง</a>
                         </li>
-                        <!--
                         <li>
                             Jenkins
                         </li>
-                        -->
                         <li>
                             Nginx
                         </li>
                         <li>
-                            Git
+                            Git (Github, Bitbucket, GitLab)
                         </li>
                         <li>
                             Jira
@@ -680,6 +761,9 @@
                         </li>
                         <li>
                             Digital Ocean
+                        </li>
+                        <li>
+                            Docker
                         </li>
                         <li>
                             ect.
@@ -704,6 +788,11 @@
                     ไม่ว่าจะเอาไป run บน computer กี่เครื่องๆ ก็สามารถทำงานได้แบบสบายๆ ครับ
                     มาดูรายละเอียด (details) ในแต่ละส่วนกัน
                 </p>
+
+                <div class="jmp-picture">
+                    <img src="static/image/coding.jpg" onclick="window.open(this.src, 'coding')"/>
+                </div>
+
                 <h4>Front end (Isomorphic)</h4>
                 <a href="javascript:void(0)">AngularJS</a>
                 <p>
@@ -734,7 +823,7 @@
                         ไว้รวมไฟล์  (เพราะผมเขียน angularjs เป็นโมดูล (Module) โมดูลละ 1 ไฟล์) 
                     </li>
                     <li>
-                        ไว้ run task ต่าง ๆ  ที่เราต้อง run บ่อยๆ เช่น <span class="jpm-highlight">Automate Test</span> (jasmine) 
+                        ไว้ run task ต่าง ๆ  ที่เราต้อง run บ่อยๆ เช่น <span class="jpm-highlight">Automated Test</span> (jasmine) 
                     </li>
                     <li>
                         ไว้บีบอัด/เข้ารหัส (Compress) ไฟล์ hml/css/javascript เป็นต้น
@@ -792,6 +881,33 @@
                     ใช้งานง่ายรึเปล่า สวยรึเปล่า การวางตำแหน่ง  Element ต่างๆ  สมดุลมั้ย  แสง สี เงา  ระยะห่าง ช่องไฟ  ความสูง ความกว้าง การจัดองค์ประกอบ  ทำได้ลงตัวแค่ไหน
                     ตั้งคำถามถามตัวเองขึ้นมามากมายว่าทำไมเขาต้องออกแบบแบบนั้น  แล้วเรารู้สึกยังไงกับมัน  ผมว่าการออกแบบโปรแกรมให้ผู้ใช้รู้สึกชอบ  มันเป็นอะไรที่ท้าทายเอามากๆ  
                 </p>
+
+                <div class="jmp-picture">
+                    <img src="static/image/tree-light.jpg" onclick="window.open(this.src, 'tree light')"/>
+                </div>
+
+                <h3>ทฤษฎี / หลักปฏิบัติต่าง ๆ ที่ใช้ในการทำงาน</h3>
+                <ul>
+                    <li>
+                        Agile (Scrum)
+                    </li>
+                    <li>
+                        SOLID Principle
+                    </li>
+                    <li>
+                        Design Pattern ต่างๆ 
+                    </li>
+                    <li>
+                        TDD (Test Driven Development)
+                    </li>
+                    <li>
+                        BDD (Behavior Driven Development)
+                    </li>
+                    <li>
+                        ATDD (Acceptance Test Driven Development)
+                    </li>
+                </ul>	
+
                 <h3>ความสนใจอื่นๆ</h3>
                 <ul>
                     <li>
@@ -859,36 +975,38 @@
                     </li>
                 </ul>
                 <h3>สิ่งที่อยากทำสักครั้งก่อนตาย</h3>
-                <ul>
-                    <li>
-                        กระโดดร่ม
-                    </li>
-                    <li>
-                        ดำน้ำลึก
-                    </li>
-                    <li>
-                        ไปดูการแข่งขัน Bigbike The isle of man ที่ประเทศอังกฤษ
-                    </li>
-                    <li>
-                        กระโดดบันจี้จั๊ม <img class="jpm-checked" src="static/image/checked.png"/>
-                        <ul>
-                            <li>
-                                ความสูง 60 เมตร - อะดรีนาลีนสูบฉีดมากๆ 
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        ไปเที่ยวที่ Machu Picchu ประเทศเปรู
-                    </li>
-                    <li>
-                        ไปสำนักงานใหญ่ Google
-                        <ul>
-                            <li>
-                                Google เป็นแรงบันดาลใจแรกของผม
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+                <div class="jpm-before-die">
+                    <ul>
+                        <li>
+                            กระโดดร่ม
+                        </li>
+                        <li>
+                            ดำน้ำลึก
+                        </li>
+                        <li>
+                            ไปดูการแข่งขัน Bigbike The isle of man ที่ประเทศอังกฤษ
+                        </li>
+                        <li>
+                            กระโดดบันจี้จั๊ม <img class="jpm-checked" src="static/image/checked.png"/>
+                            <ul>
+                                <li>
+                                    ความสูง 60 เมตร - อะดรีนาลีนสูบฉีดมากๆ 
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            ไปเที่ยวที่ Machu Picchu ประเทศเปรู
+                        </li>
+                        <li>
+                            ไปสำนักงานใหญ่ Google
+                            <ul>
+                                <li>
+                                    Google เป็นแรงบันดาลใจแรกของผม
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
                 <h3>Social / Profile / <span>ข้อมูลการติดต่อ อื่นๆ</span></h3>
                 <ul>
                     <li>
@@ -906,6 +1024,9 @@
                     <li>
                         <a href="http://na5cent.blogspot.com/">Blogger</a>
                     </li>
+                    <li>
+                        <a href="https://www.instagram.com/jittagornp/">Instagram</a>
+                    </li>
                 </ul>
             </div>
             <div class="jpm-footer">
@@ -917,25 +1038,25 @@
         <script type="text/javascript" src="static/js/moment.min.js"></script> 
         <script type="text/javascript">
 
-                            (function scope($, mm) {
-                                $(function ready() {
+                        (function scope($, mm) {
+                            $(function ready() {
 
-                                    mm.locale('th');
+                                mm.locale('th');
 
-                                    $('.jpm-fromnow').each(function () {
-                                        var $fromnow = $(this);
-                                        var dateStr = $fromnow.attr('data-date-start');
+                                $('.jpm-fromnow').each(function () {
+                                    var $fromnow = $(this);
+                                    var dateStr = $fromnow.attr('data-date-start');
 
-                                        var date = mm(new Date(dateStr));
-                                        $fromnow.html(date.fromNow(true));
-                                    });
-
-                                    $('a').each(function () {
-                                        $(this).attr('target', '_blank');
-                                    });
-
+                                    var date = mm(new Date(dateStr));
+                                    $fromnow.html(date.fromNow(true));
                                 });
-                            })(jQuery, moment);
+
+                                $('a').each(function () {
+                                    $(this).attr('target', '_blank');
+                                });
+
+                            });
+                        })(jQuery, moment);
         </script>
     </body>
 </html>
