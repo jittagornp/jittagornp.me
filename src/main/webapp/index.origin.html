@@ -314,7 +314,11 @@
                 width: 100%;
                 height: 100%;
             }
-            
+
+            .jpm-gitlab-profile{
+                border: solid 1px #e6e6e6;
+            }
+
             .jpm-gitlab-profile img{
                 display: block;
                 width: 100%;
@@ -640,7 +644,7 @@
                                     Gulp.js
                                 </li>
                                 <li>
-                                  Bower.js
+                                    Bower.js
                                 </li>
                                 <li>
                                     ect.
@@ -680,7 +684,7 @@
                                             MVC / Restful
                                         </li>
                                         <li>
-                                          Boot
+                                            Boot
                                         </li>
                                         <li>
                                             ect.
@@ -1064,23 +1068,23 @@
         <script type="text/javascript">
 
                         (function scope($, mm) {
-                            $(function ready() {
+                          $(function ready() {
 
-                                mm.locale('th');
+                            mm.locale('th');
 
-                                $('.jpm-fromnow').each(function () {
-                                    var $fromnow = $(this);
-                                    var dateStr = $fromnow.attr('data-date-start');
+                            $('.jpm-fromnow').each(function () {
+                              var $fromnow = $(this);
+                              var dateStr = $fromnow.attr('data-date-start');
 
-                                    var date = mm(new Date(dateStr));
-                                    $fromnow.html(date.fromNow(true));
-                                });
-
-                                $('a').each(function () {
-                                    $(this).attr('target', '_blank');
-                                });
-
+                              var date = mm(new Date(dateStr));
+                              $fromnow.html(date.fromNow(true));
                             });
+
+                            $('a').each(function () {
+                              $(this).attr('target', '_blank');
+                            });
+
+                          });
                         })(jQuery, moment);
         </script>
     </body>
