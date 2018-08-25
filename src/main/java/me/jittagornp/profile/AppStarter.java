@@ -6,20 +6,18 @@
 package me.jittagornp.profile;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 /**
- *
- * @author jittagornp
+ * @author jittagornp &lt;http://jittagornp.me&gt; create : 2018/03/28
  */
 @SpringBootApplication
-@EnableAutoConfiguration
-@ComponentScan({"me.jittagornp.profile"})
-public class App {
-    
-    public static void main(String[] args) {
-        SpringApplication.run(App.class, args);
+@ComponentScan("me.jittagornp")
+public class AppStarter {
+
+    public static void main(String[] args) throws Exception {
+        SpringApplication.run(AppStarter.class, args);
     }
+
 }
