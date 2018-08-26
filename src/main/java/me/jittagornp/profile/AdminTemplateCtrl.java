@@ -16,7 +16,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class AdminTemplateCtrl {
 
-  @GetMapping({"", "/portfolio/admin-template"})
+  @GetMapping({"/portfolio/admin-template"})
   public ModelAndView getIndex(@RequestParam(value = "page", required = false, defaultValue = "index") String page) {
     ModelAndView mav = new ModelAndView("portfolio/admin-template/template");
     mav.addObject("container", "portfolio/admin-template/" + page);
