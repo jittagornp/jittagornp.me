@@ -1,0 +1,179 @@
+<span th:fragment="sidebar" th:include="portfolio/admin-template/master-data/sidebar"></span>
+
+<span th:fragment="container">
+    <nav aria-label="breadcrumb" class="ui-breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="?page=master-data/all">จัดการข้อมูลพื้นฐาน</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+                จัดการข้อมูลพื้นฐานการค้าภายในประเทศ
+            </li>
+        </ol>
+        <button class="btn btn-light ui-back-button">
+            <span class="fa fa-chevron-left"></span>
+            กลับ
+        </button>
+    </nav>
+
+    <div class="ui-container-header">
+        <span class="fa fa-database"></span>
+        จัดการข้อมูลพื้นฐานการค้าภายในประเทศ
+    </div>
+
+    <h4 class="ui-container-topic">ข้อมูลทั่วไป</h4>
+
+    <div class="list-group list-group-flush ui-list-group">
+        <a class="list-group-item" href="?page=master-data/trade/unit-price/all">
+            หน่วยราคา
+        </a>
+        <a class="list-group-item" href="?page=master-data/trade/currency/all">
+            ชื่อสกุลเงิน
+        </a>
+        <a class="list-group-item" href="?page=master-data/trade/price/all">
+            ชื่อเรียกราคา
+        </a>
+        <a class="list-group-item" href="?page=master-data/trade/volumn/all">
+            ชื่อเรียกปริมาณ
+        </a>
+        <a class="list-group-item" href="?page=master-data/trade/unit-volumn/all">
+            หน่วยปริมาณ
+        </a>
+        
+        <a class="list-group-item" href="?page=master-data/trade/survey-type/all">
+            ชื่อประเภทแหล่งสืบ
+        </a>
+        <a class="list-group-item" href="?page=master-data/trade/international-org/all">
+            ชื่อองค์กรระหว่างประเทศ
+        </a>
+        <a class="list-group-item" href="?page=master-data/trade/other-report/all">
+            ชื่อรายงานอื่นๆ
+        </a>
+        <a class="list-group-item" href="?page=master-data/trade/report-frequency/all">
+            ชื่อความถี่ของรายงาน
+        </a>
+        <a class="list-group-item" href="?page=master-data/trade/entrepreneurship/all">
+            ชื่อกลุ่มผู้ประกอบการ
+        </a>
+        <a class="list-group-item" href="?page=master-data/trade/entrepreneur/all">
+            ชื่อประเภทผู้ประกอบการ
+        </a>
+    </div>
+
+    <h4 class="ui-container-topic">ข้อมูลพื้นฐานสินค้า</h4>
+
+    <div class="list-group list-group-flush ui-list-group">
+        <a class="list-group-item" href="?page=master-data/trade/product-group/all">
+            กลุ่มสินค้า
+        </a>
+        <div class="accordion" id="accordion">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            1. เกษตรกรรม 
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        <a class="list-group-item" href="?page=master-data/trade/product-category/all">
+                            หมวดสินค้า
+                        </a>
+                        <a class="list-group-item" href="?page=master-data/trade/product/all">
+                            รายการสินค้า
+                        </a>
+
+                        <a class="list-group-item" href="?page=master-data/trade/sub-product/all">
+                            รายการสินค้าย่อย
+                        </a>
+                        <a class="list-group-item" href="?page=master-data/trade/product-type/all">
+                            ชนิด/ตรา
+                        </a>
+                        <a class="list-group-item" href="?page=master-data/trade/product-size/all">
+                            ขนาด/เกรด
+                        </a> 
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            2. อุปโภคบริโภค  
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">
+                        <a class="list-group-item" href="javascript:void(0)">
+                            หมวดสินค้า
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            รายการสินค้า
+                        </a>
+
+                        <a class="list-group-item" href="javascript:void(0)">
+                            รายการสินค้าย่อย
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            ชนิด/ตรา
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            ขนาด/เกรด
+                        </a> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h4 class="ui-container-topic">แบบฟอร์มการติดตามภาวะตลาด</h4>
+
+    <div th:include="portfolio/admin-template/master-data/trade/form"></div>
+
+    <h4 class="ui-container-topic">รายงาน</h4>
+
+    <div class="list-group list-group-flush ui-list-group">
+        <a class="list-group-item" href="?page=master-data/trade/report-group/all">
+            กลุ่มรายงาน
+        </a>
+        <a class="list-group-item" href="?page=master-data/trade/report-group/add">
+            เพิ่มกลุ่มรายงาน
+        </a>
+        <a class="list-group-item" href="?page=master-data/trade/report/add">
+            เพิ่มรายงาน
+        </a>
+    </div>
+    
+    <div style="padding: 1rem 0;">
+        รายงานทั้งหมด
+    </div>
+
+    <div th:include="portfolio/admin-template/master-data/trade/report"></div>
+
+    <!--
+    <div class="list-group list-group-flush ui-list-group">
+        <a class="list-group-item" href="javascript:void(0)">
+            เมนูหลัก
+        </a>
+        <a class="list-group-item" href="javascript:void(0)">
+            เมนูย่อย
+        </a>
+        <a class="list-group-item" href="javascript:void(0)">
+            ชื่อฟอร์มกรอกรายงาน
+        </a>
+
+        <a class="list-group-item" href="javascript:void(0)">
+            กลุ่มรายงาน
+        </a>
+        <a class="list-group-item" href="javascript:void(0)">
+            ชื่อรายงาน
+        </a>
+        <a class="list-group-item" href="javascript:void(0)">
+            ช่วงความถี่การรายงาน
+        </a>
+    </div>
+    -->
+</span>

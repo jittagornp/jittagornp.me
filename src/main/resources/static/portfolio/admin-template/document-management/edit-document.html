@@ -1,0 +1,303 @@
+<span th:fragment="sidebar" th:include="portfolio/admin-template/document-management/sidebar"></span>
+
+<span th:fragment="subMenu" th:include="portfolio/admin-template/document-management/submenu"></span>
+
+<span th:fragment="container">
+
+    <nav aria-label="breadcrumb" class="ui-breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="?page=document-management/all">จัดการเอกสาร</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+                แก้ไขเอกสาร
+            </li>
+        </ol>
+        <button class="btn btn-light ui-back-button">
+            <span class="fa fa-chevron-left"></span>
+            กลับ
+        </button>
+    </nav>
+
+    <div class="ui-save-alert alert alert-info" role="alert">
+        <span class="fa fa-save"></span>
+        บันทึกข้อมูลเสร็จเรียบร้อย
+    </div>
+
+    <div class="ui-container-header">
+        <span class="fa fa-file"></span>
+        แก้ไขเอกสาร
+    </div>
+
+    <form class="ui-form">
+
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                folder 1
+            </li>
+            <li class="breadcrumb-item">
+                folder 4
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+                folder 3
+            </li>
+        </ol>
+
+        <button class="btn btn-light">
+            <span class="fa fa-folder"></span>
+            เปลี่ยนที่จัดเก็บ
+        </button>
+
+        <h4 class="ui-container-topic">อัพโหลด</h4>
+
+        <div class="row">
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="attachFile">ไฟล์แนบ</label>
+                    <div class="input-group">
+                        <input id="attachFile" type="text" class="form-control"/>
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-success">
+                                <span class="fa fa-plus" style="margin-right: 0.5rem;"></span>
+                                อัพโหลด
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h4 class="ui-container-topic">รายละเอียดเอกสาร</h4>
+
+        <div class="row">
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="docNo">เลขที่เอกสาร</label>
+                    <input type="text" class="form-control" id="docNo" placeholder="Document Number">
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="docReference">เอกสารอ้างอิง</label>
+                    <div class="input-group">
+                        <input id="docReference" type="text" class="form-control"/>
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-light">
+                                <span class="fa fa-plus"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="docStatus">สถานะเอกสาร</label>
+                    <div class="ui-select">
+                        <select class="form-control" id="docStatus">
+                            <option>Active</option>
+                            <option>Inactive</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="docDate">เอกสารลงวันที่</label>
+
+                    <div class="input-group">
+                        <input type="date" class="form-control" id="docDate" placeholder="Date">
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-light">
+                                <span class="fa fa-calendar"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="docExpire">เอกสารหมดอายุวันที่</label>
+
+                    <div class="input-group">
+                        <input type="date" class="form-control" id="docExpire" placeholder="Date">
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-light">
+                                <span class="fa fa-calendar"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="docDueDate">เอกสารครบกำหนดวันที่</label>
+
+                    <div class="input-group">
+                        <input type="date" class="form-control" id="docDueDate" placeholder="Date">
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-light">
+                                <span class="fa fa-calendar"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="language">เลือกภาษา</label>
+                    <div class="ui-select">
+                        <select class="form-control" id="language">
+                            <option>ไทย</option>
+                            <option>อังกฤษ</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="docType">ชนิดของเอกสาร</label>
+                    <div class="ui-select">
+                        <select class="form-control" id="docType">
+                            <option>Original (ต้นฉบับ)</option>
+                            <option>คำแปล</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="docSecType">ประเภทของเอกสาร</label>
+                    <div class="ui-select">
+                        <select class="form-control" id="docSecType">
+                            <option>เอกสารส่วนกลาง</option>
+                            <option>เอกสารระดับหน่วยงาน</option>
+                            <option>เอกสารส่วนบุคคล</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="authorName">ชื่อผู้แต่ง</label>
+                    <input type="text" class="form-control" id="authorName" placeholder="Author Name">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="docTitle">เรื่อง</label>
+                    <input type="text" class="form-control" id="docTitle" placeholder="Document Title">
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="docDetail">รายละเอียด</label>
+                    <textarea id="docDetail" class="form-control"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="docKeyword">คำค้น</label>
+                    <textarea id="docKeyword" class="form-control"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="docDesc">ข้อคิดเห็น</label>
+                    <textarea id="docDesc" class="form-control"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <h4 class="ui-container-topic">ที่มาของเอกสาร</h4>
+
+        <div class="row">
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="ownerName">ชื่อเจ้าของเอกสาร</label>
+                    <input type="text" class="form-control" id="ownerName" placeholder="Owner Name">
+                </div>
+            </div>
+
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="ownerDept">หน่วยงานเจ้าของเอกสาร</label>
+                    <div class="input-group">
+                        <input id="ownerDept" type="text" class="form-control"/>
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-light">
+                                <span class="fa fa-plus"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h4 class="ui-container-topic">การกำหนดสิทธิ์การเรียกดูเอกสาร</h4>
+
+        <div class="row">
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="secLevel">ระดับสิทธิ์ของผู้เรียกดู</label>
+                    <div class="ui-select">
+                        <select class="form-control" id="secLevele">
+                            <option>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="docGrant">หน่วยงานที่สามารถเรียกดู</label>
+                    <div class="input-group">
+                        <input id="docGrant" type="text" class="form-control"/>
+                        <span class="input-group-btn">
+                            <button type="button" class="btn btn-light">
+                                <span class="fa fa-plus"></span>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ui-form-footer">
+            <button type="submit" class="btn btn-light">ยกเลิก</button>
+            <button type="submit" class="btn btn-primary ui-save-button"><span class="fa fa-save"></span>บันทึก</button>
+        </div>
+    </form>
+</span>

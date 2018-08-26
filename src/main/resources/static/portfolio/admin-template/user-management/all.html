@@ -1,0 +1,53 @@
+<span th:fragment="sidebar" th:include="portfolio/admin-template/user-management/sidebar"></span>
+
+<span th:fragment="container">
+    <nav aria-label="breadcrumb" class="ui-breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active" aria-current="page">
+                จัดการบัญชีผู้ใช้
+            </li>
+        </ol>
+        <button class="btn btn-light ui-back-button">
+            <span class="fa fa-chevron-left"></span>
+            กลับ
+        </button>
+    </nav>
+
+    <div class="ui-container-header">
+        <span class="fa fa-users"></span>
+        จัดการบัญชีผู้ใช้
+    </div>
+
+    <h4 class="ui-container-topic">ผู้ใช้งาน</h4>
+
+    <div class="list-group list-group-flush ui-list-group">
+        <a class="list-group-item" href="?page=user-management/add-user">
+            เพิ่มผู้ใช้งาน
+        </a>
+        <a class="list-group-item" href="?page=user-management/user">
+            ผู้ใช้งาน
+        </a>
+    </div>
+
+    <h4 class="ui-container-topic">กลุ่มผู้ใช้งาน</h4>
+
+    <div class="list-group list-group-flush ui-list-group">
+        <a class="list-group-item" href="?page=user-management/add-workgroup">
+            เพิ่มกลุ่มผู้ใช้งาน
+        </a>
+        <a class="list-group-item" href="?page=user-management/workgroup">
+            กลุ่มผู้ใช้งาน
+        </a>
+    </div>
+
+    <h4 class="ui-container-topic">สิทธิ์การใช้งาน</h4>
+
+    <div class="list-group list-group-flush ui-list-group">
+        <a class="list-group-item" href="?page=user-management/add-authority">
+            เพิ่มสิทธิ์การใช้งาน
+        </a>
+        <a class="list-group-item" href="?page=user-management/authority">
+            สิทธิ์การใช้งาน
+        </a>
+    </div>
+</span>

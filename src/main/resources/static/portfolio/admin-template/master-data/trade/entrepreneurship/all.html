@@ -1,0 +1,231 @@
+<span th:fragment="sidebar" th:include="portfolio/admin-template/master-data/sidebar"></span>
+
+<span th:fragment="container">
+    <nav aria-label="breadcrumb" class="ui-breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="?page=master-data/all">จัดการข้อมูลพื้นฐาน</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="?page=master-data/trade/all">จัดการข้อมูลพื้นฐานการค้าภายในประเทศ</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+                ชื่อกลุ่มผู้ประกอบการ
+            </li>
+        </ol>
+        <button class="btn btn-light ui-back-button">
+            <span class="fa fa-chevron-left"></span>
+            กลับ
+        </button>
+    </nav>
+
+    <div class="ui-container-header">
+        ชื่อกลุ่มผู้ประกอบการ
+
+        <a class="btn btn-success ui-add-button" href="?page=master-data/trade/entrepreneurship/add">
+            <span class="fa fa-plus"></span>
+            <span class="text-center">เพิ่มข้อมูล</span>
+        </a>
+    </div>
+
+    <div class="input-group ui-search-input" style="margin-bottom: 1rem;">
+        <input type="text" class="form-control" placeholder="ค้นหาด้วย ชื่อ"/>
+        <span class="input-group-btn">
+            <button type="button" class="btn btn-light">ค้นหา</button>
+        </span>
+    </div>
+
+
+    <div th:include="portfolio/admin-template/found-all" th:with="number='9'"></div>
+
+    <div class="ui-table-freeze--wrapper">
+        <div class="ui-table-freeze--scroller">
+            <table class="table table-sm ui-table-freeze">
+                <thead>
+                    <tr>
+                        <th scope="col" class="ui-row__seq">ลำดับ</th>
+                        <th scope="col">ชื่อกลุ่มผู้ประกอบการ</th>
+                        <th scope="col" class="text-center ui-table-freeze__column">
+
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>ผู้รับซื้อกระเทียม</td>
+                        <td class="ui-table-freeze__column">
+                            <div class="dropleft dropdown">
+                                <button class="btn btn-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="fa fa-ellipsis-v"></span>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="?page=master-data/trade/entrepreneurship/edit"><span class="fa fa-pencil"></span>แก้ไขข้อมูล</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item ui-dropdown-item--delete" data-toggle="modal" data-target="#deleteModal">
+                                        <span class="fa fa-trash"></span>
+                                        ลบ
+                                    </a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>ผู้รับซื้อถั่วเหลือง</td>
+                        <td class="ui-table-freeze__column">
+                            <div class="dropleft dropdown">
+                                <button class="btn btn-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="fa fa-ellipsis-v"></span>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="?page=master-data/trade/entrepreneurship/edit"><span class="fa fa-pencil"></span>แก้ไขข้อมูล</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item ui-dropdown-item--delete" data-toggle="modal" data-target="#deleteModal">
+                                        <span class="fa fa-trash"></span>
+                                        ลบ
+                                    </a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>ผู้รับซื้อขิง</td>
+                        <td class="ui-table-freeze__column">
+                            <div class="dropleft dropdown">
+                                <button class="btn btn-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="fa fa-ellipsis-v"></span>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="?page=master-data/trade/entrepreneurship/edit"><span class="fa fa-pencil"></span>แก้ไขข้อมูล</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item ui-dropdown-item--delete" data-toggle="modal" data-target="#deleteModal">
+                                        <span class="fa fa-trash"></span>
+                                        ลบ
+                                    </a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>สถานีบริการน้ำมันเชื้อเพลิง</td>
+                        <td class="ui-table-freeze__column">
+                            <div class="dropleft dropdown">
+                                <button class="btn btn-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="fa fa-ellipsis-v"></span>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="?page=master-data/trade/entrepreneurship/edit"><span class="fa fa-pencil"></span>แก้ไขข้อมูล</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item ui-dropdown-item--delete" data-toggle="modal" data-target="#deleteModal">
+                                        <span class="fa fa-trash"></span>
+                                        ลบ
+                                    </a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>ผู้รับซื้อมันสำปะหลัง</td>
+                        <td class="ui-table-freeze__column">
+                            <div class="dropleft dropdown">
+                                <button class="btn btn-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="fa fa-ellipsis-v"></span>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="?page=master-data/trade/entrepreneurship/edit"><span class="fa fa-pencil"></span>แก้ไขข้อมูล</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item ui-dropdown-item--delete" data-toggle="modal" data-target="#deleteModal">
+                                        <span class="fa fa-trash"></span>
+                                        ลบ
+                                    </a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">6</th>
+                        <td>ผู้รับซื้อมันสำปะหลัง</td>
+                        <td class="ui-table-freeze__column">
+                            <div class="dropleft dropdown">
+                                <button class="btn btn-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="fa fa-ellipsis-v"></span>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="?page=master-data/trade/entrepreneurship/edit"><span class="fa fa-pencil"></span>แก้ไขข้อมูล</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item ui-dropdown-item--delete" data-toggle="modal" data-target="#deleteModal">
+                                        <span class="fa fa-trash"></span>
+                                        ลบ
+                                    </a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">7</th>
+                        <td>โรงงานน้ำตาลทราย</td>
+                        <td class="ui-table-freeze__column">
+                            <div class="dropleft dropdown">
+                                <button class="btn btn-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="fa fa-ellipsis-v"></span>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="?page=master-data/trade/entrepreneurship/edit"><span class="fa fa-pencil"></span>แก้ไขข้อมูล</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item ui-dropdown-item--delete" data-toggle="modal" data-target="#deleteModal">
+                                        <span class="fa fa-trash"></span>
+                                        ลบ
+                                    </a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">8</th>
+                        <td>โรงงานแป้งมันสำปะหลัง</td>
+                        <td class="ui-table-freeze__column">
+                            <div class="dropleft dropdown">
+                                <button class="btn btn-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="fa fa-ellipsis-v"></span>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="?page=master-data/trade/entrepreneurship/edit"><span class="fa fa-pencil"></span>แก้ไขข้อมูล</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item ui-dropdown-item--delete" data-toggle="modal" data-target="#deleteModal">
+                                        <span class="fa fa-trash"></span>
+                                        ลบ
+                                    </a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">9</th>
+                        <td>โรงงาน</td>
+                        <td class="ui-table-freeze__column">
+                            <div class="dropleft dropdown">
+                                <button class="btn btn-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="fa fa-ellipsis-v"></span>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="?page=master-data/trade/entrepreneurship/edit"><span class="fa fa-pencil"></span>แก้ไขข้อมูล</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item ui-dropdown-item--delete" data-toggle="modal" data-target="#deleteModal">
+                                        <span class="fa fa-trash"></span>
+                                        ลบ
+                                    </a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div th:include="portfolio/admin-template/pagination"></div>
+</span>

@@ -1,0 +1,101 @@
+<span th:fragment="sidebar" th:include="portfolio/admin-template/user-management/sidebar"></span>
+
+<span th:fragment="container">
+
+    <nav aria-label="breadcrumb" class="ui-breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="?page=user-management/all">จัดการบัญชีผู้ใช้</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="?page=user-management/user">ผู้ใช้งาน</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+                เพิ่มผู้ใช้งาน
+            </li>
+        </ol>
+        <button class="btn btn-light ui-back-button">
+            <span class="fa fa-chevron-left"></span>
+            กลับ
+        </button>
+    </nav>
+
+    <div class="ui-save-alert alert alert-success" role="alert">
+        <span class="fa fa-save"></span>
+        เพิ่มข้อมูลเสร็จเรียบร้อย
+    </div>
+
+    <div class="ui-container-header">
+        <span class="fa fa-user-plus"></span>
+        เพิ่มผู้ใช้งาน
+    </div>
+
+    <form class="ui-form">
+        <div class="row">
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="firstName">ชื่อ</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="First Name">
+                </div>
+                <div class="form-group">
+                    <label for="lastName">นามสกุล</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+                </div>
+                <div class="form-group">
+                    <label for="username">บัญชีผู้ใช้</label>
+                    <input type="text" class="form-control" id="username" placeholder="Username" disabled>
+                </div>
+                <div class="form-group">
+                    <label for="password">รหัสผ่าน</label>
+                    <input type="password" class="form-control" id="password" placeholder="Password" value="*****">
+                </div>
+                <div class="form-group">
+                    <label for="email">อีเมล</label>
+                    <input type="email" class="form-control" id="email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label for="mobile">เบอร์โทรศัพท์</label>
+                    <input type="text" class="form-control" id="mobile" placeholder="Mobile">
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="position">ตำแหน่ง</label>
+                    <input type="text" class="form-control" id="position" placeholder="Position">
+                </div>
+                <div class="form-group">
+                    <label for="under">หน่วยงานที่สังกัด</label>
+                    <input type="text" class="form-control" id="under" placeholder="Under">
+                </div>
+                <div class="form-group">
+                    <label for="province">จังหวัด</label>
+                    <div class="ui-select">
+                        <select id="province" class="form-control">
+                            <option>เลือก</option>
+                        </select>
+                    </div>
+                </div>
+
+                <h4 class="ui-container-topic" style="margin-top: 3.6rem;">สิทธิ์การใช้งาน</h4>
+
+                <div class="form-group">
+                    <label for="usergroup">กลุ่มผู้ใช้งาน</label>
+                    <div class="ui-select">
+                        <select id="usergroup" class="form-control">
+                            <option>เลือก</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="authority">สิทธิ์</label>
+                    <div th:include="portfolio/admin-template/user-management/authority-checkbox"></div>
+                </div>
+            </div>
+        </div>
+        <div class="ui-form-footer">
+            <button type="submit" class="btn btn-light">ยกเลิก</button>
+            <button type="submit" class="btn btn-success ui-save-button">เพิ่ม</button>
+        </div>
+    </form>
+</span>

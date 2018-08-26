@@ -1,0 +1,60 @@
+<span th:fragment="sidebar" th:include="portfolio/admin-template/master-data/sidebar"></span>
+
+<span th:fragment="container">
+    <nav aria-label="breadcrumb" class="ui-breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active" aria-current="page">
+                จัดการข้อมูลพื้นฐาน 
+            </li>
+        </ol>
+        <button class="btn btn-light ui-back-button">
+            <span class="fa fa-chevron-left"></span>
+            กลับ
+        </button>
+    </nav>
+
+    <div class="ui-container-header">
+        <span class="fa fa-database"></span>
+        จัดการข้อมูลพื้นฐาน
+    </div>
+
+    <h4 class="ui-container-topic">ข้อมูลพื้นฐาน</h4>
+
+    <div class="list-group list-group-flush ui-list-group">
+        <a class="list-group-item" href="?page=master-data/landmass/all">
+            ทวีป
+        </a>
+        <a class="list-group-item" href="?page=master-data/country-group/all">
+            กลุ่มประเทศ
+        </a>
+        <a class="list-group-item" href="?page=master-data/country/all">
+            ประเทศ
+        </a>
+        <a class="list-group-item" href="?page=master-data/region/all">
+            ภาค
+        </a>
+        <a class="list-group-item" href="?page=master-data/province/all">
+            จังหวัด
+        </a>
+        <a class="list-group-item" href="?page=master-data/district/all">
+            อำเภอ
+        </a>
+        <a class="list-group-item" href="?page=master-data/sub-district/all">
+            ตำบล
+        </a>
+        <a class="list-group-item" href="?page=master-data/bank/all">
+            ธนาคาร
+        </a>
+    </div>
+
+    <h4 class="ui-container-topic">เลือกระบบ</h4>
+
+    <div class="list-group list-group-flush ui-list-group">
+        <a class="list-group-item" href="?page=master-data/trade/all">
+            ข้อมูลการค้าภายในประเทศ (สก. 1-10)
+        </a>
+        <a class="list-group-item" href="?page=master-data/agri/all">
+            ข้อมูลสินค้าเกษตร
+        </a>
+    </div>
+</span>

@@ -1,0 +1,757 @@
+<span th:fragment="sidebar" th:include="portfolio/admin-template/agri/sidebar"></span>
+
+<span th:fragment="container">
+    <nav aria-label="breadcrumb" class="ui-breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active" aria-current="page">
+                ข้อมูลสินค้าเกษตร
+            </li>
+        </ol>
+        <button class="btn btn-light ui-back-button">
+            <span class="fa fa-chevron-left"></span>
+            กลับ
+        </button>
+    </nav>
+
+    <div class="ui-container-header">
+        <span class="fa fa-pagelines"></span>
+        ข้อมูลสินค้าเกษตร
+    </div>
+
+    <div class="text-right">
+        <a class="btn--small btn btn-light btn-light--primary" href="?page=agri/keyin" style="margin-right: 0.5rem;">
+            <span class="fa fa-history"></span>
+            <span class="text-center">ประวัติการกรอกข้อมูล</span>
+        </a>
+
+        <a class="btn--small btn btn-light btn-light--success" href="?page=agri/approve">
+            <span class="badge badge-danger">99</span>
+            <span class="text-center">อนุมัติข้อมูล</span>
+        </a>
+    </div>
+
+    <div class="input-group ui-search-input" style="margin-top: 1rem; margin-bottom: 1rem;">
+        <input type="text" class="form-control" placeholder="ค้นหาด้วย ชื่อสินค้า"/>
+        <span class="input-group-btn">
+            <button type="button" class="btn btn-light">ค้นหา</button>
+        </span>
+    </div>
+
+    <div th:include="portfolio/admin-template/found-all" th:with="number='70'"></div>
+
+    <div class="table-responsive-sm">
+        <table class="table table-sm">
+            <thead>
+                <tr>
+                    <th scope="col" class="ui-row__seq">ลำดับ</th>
+                    <th scope="col">ชื่อสินค้า</th>
+                    <th scope="col" class="text-center" style="width: 60px;">
+
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>ข้าว</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-1/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">2</th>
+                    <td>กระเจี๊ยบแห้ง</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-2/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">3</th>
+                    <td>กระเทียม</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-3/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">4</th>
+                    <td>กระบือ</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-4/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">5</th>
+                    <td>กากถั่วเหลือง</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-5/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">6</th>
+                    <td>เมล็ดกาแฟ</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-6/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">7</th>
+                    <td>กุ้งก้ามกราม</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-7/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">8</th>
+                    <td>เกลือทะเล</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-8/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">9</th>
+                    <td>ไก่เนื้อ</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-9/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">10</th>
+                    <td>ข้าวโพดเลี้ยงสัตว์</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-10/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">11</th>
+                    <td>ข้าวฟ่าง</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-11/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">12</th>
+                    <td>ขิง</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-12/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">13</th>
+                    <td>ไข่เป็ด</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-13/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">14</th>
+                    <td>โคเนื้อ</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-14/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">15</th>
+                    <td>งา</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-15/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">16</th>
+                    <td>เงาะ</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-16/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">17</th>
+                    <td>ชา</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-17/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">18</th>
+                    <td>ถั่วเขียว</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-18/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">19</th>
+                    <td>ถั่วดำ</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-19/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">20</th>
+                    <td>ถั่วลิสง</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-20/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">21</th>
+                    <td>ถั่งเหลือง</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-21/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">22</th>
+                    <td>ทานตะวัน</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-22/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">23</th>
+                    <td>ทุเรียน</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-23/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">24</th>
+                    <td>ปลาทับทิม</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-24/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">25</th>
+                    <td>ปลาสวาย</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-25/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">26</th>
+                    <td>ปลาช่อน</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-26/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">27</th>
+                    <td>ปลาดุก</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-27/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">28</th>
+                    <td>ปลานิล</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-28/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">29</th>
+                    <td>หอยลาย</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-29/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">30</th>
+                    <td>หอยแมลงภู่</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-30/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">31</th>
+                    <td>ปลาทูสด</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-31/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">32</th>
+                    <td>ไข่ไก่</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-32/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">33</th>
+                    <td>ลูกไก่ไข่</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-33/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">34</th>
+                    <td>ลูกไก่เนื้อ</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-34/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">35</th>
+                    <td>กุ้งขาว ฯ</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-35/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">36</th>
+                    <td>ปลาหมึก</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-36/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">37</th>
+                    <td>ปอ</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-37/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">38</th>
+                    <td>ปาล์มน้ำมัน</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-38/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">39</th>
+                    <td>ผลไม้อื่น ๆ</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-31/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">40</th>
+                    <td>ผักต่าง ๆ</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-40/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">41</th>
+                    <td>ฝ้าย</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-41/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">42</th>
+                    <td>พริกไทย</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-42/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">43</th>
+                    <td>พริกใหญ่สด</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-43/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">44</th>
+                    <td>มะนาว</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-44/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">45</th>
+                    <td>มะพร้าว</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-45/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">46</th>
+                    <td>มังคุด</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-46/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">47</th>
+                    <td>มันฝรั่ง</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-47/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">48</th>
+                    <td>มันสำปะหลัง</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-48/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">49</th>
+                    <td>ยางพารา</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-49/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">50</th>
+                    <td>รำข้าว/ปลายข้าว</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-50/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">51</th>
+                    <td>ลองกอง</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-51/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">52</th>
+                    <td>ละหุ่ง</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-52/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">53</th>
+                    <td>ลำไย</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-53/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">54</th>
+                    <td>ลิ้นจี่</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-54/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">55</th>
+                    <td>ส้มเขียวหวาน</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-55/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">56</th>
+                    <td>ส้บปะรด</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-56/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">57</th>
+                    <td>สุกร</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-57/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">58</th>
+                    <td>หอมแดง</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-58/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">59</th>
+                    <td>หอมหัวใหญ่</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-59/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">60</th>
+                    <td>หอยแครง</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-60/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">61</th>
+                    <td>ไหม</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-61/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">62</th>
+                    <td>ลูกเดือย</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-62/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">63</th>
+                    <td>มะขามเปียก</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-63/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">64</th>
+                    <td>นุ่น</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-64/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">65</th>
+                    <td>ส้มโอ</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-65/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">66</th>
+                    <td>มะขามหวาน</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-66/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">67</th>
+                    <td>มะพร้าวน้ำหอม</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-67/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">68</th>
+                    <td>มะเขือเทศ</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-68/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">69</th>
+                    <td>ปลาป่น</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-69/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">70</th>
+                    <td>ถั่วนิ้วนางแดง</td>
+                    <td>
+                        <a class="btn btn-light" href="?page=agri/product-70/all">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</span>

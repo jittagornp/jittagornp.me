@@ -1,0 +1,50 @@
+<span th:fragment="sidebar" th:include="portfolio/admin-template/account/sidebar"></span>
+
+<span th:fragment="container">
+    <nav aria-label="breadcrumb" class="ui-breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="?page=account/index">บัญชีผู้ใช้</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+                เปลี่ยนเบอร์โทรศัพท์
+            </li>
+        </ol>
+        <button class="btn btn-light ui-back-button">
+            <span class="fa fa-chevron-left"></span>
+            กลับ
+        </button>
+    </nav>
+    
+    <div class="ui-save-alert alert alert-info" role="alert">
+        <span class="fa fa-save"></span>
+        บันทึกข้อมูลเสร็จเรียบร้อย
+    </div>
+
+    <div class="ui-container-header">
+        <span class="fa fa-mobile"></span>
+        เปลี่ยนเบอร์โทรศัพท์
+    </div>
+
+    <form class="ui-form">
+        <div class="row">
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="mobile">เบอร์โทรศัพท์</label>
+                    <input type="mobile" class="form-control" id="mobile" placeholder="Mobile">
+                </div>
+                <div class="form-group">
+                    <label for="password">รหัสผ่าน</label>
+                    <input type="password" class="form-control" id="password" placeholder="Password">
+                </div>
+            </div>
+            <div class="col-sm">
+               
+            </div>
+        </div>
+        <div class="ui-form-footer">
+            <button type="submit" class="btn btn-light">ยกเลิก</button>
+            <button type="submit" class="btn btn-primary ui-save-button"><span class="fa fa-save"></span>บันทึก</button> 
+        </div>
+    </form>
+</span>

@@ -1,0 +1,30 @@
+<div th:fragment="sidebar">
+    <div class="list-group">
+        <a class="list-group-item list-group-item-action" href="?page=document-management/all">
+            <span class="fa fa-folder-open"></span>
+            จัดการเอกสาร
+        </a>
+        <a class="list-group-item list-group-item-action" href="?page=document-management/search">
+            <span class="fa fa-search"></span>
+            ค้นหาเอกสาร
+        </a>
+
+        <a class="list-group-item list-group-item-action" href="?page=document-management/trash">
+            <span class="fa fa-trash"></span>
+            ถังขยะ
+        </a>
+        <a class="list-group-item list-group-item-action" href="?page=document-management/add-document">
+            <span class="fa fa-file"></span>
+            เพิ่มเอกสาร
+        </a>
+        <a class="list-group-item list-group-item-action" href="?page=document-management/add-folder">
+            <span class="fa fa-folder"></span>
+            เพิ่มโฟล์เดอร์
+        </a>
+        <a class="list-group-item list-group-item-action ui-sidebar-menu--back2HomePage" href="?page=index">
+            <span class="fa fa-angle-double-left"></span>
+            หน้าแรก
+        </a>
+    </div>
+    <div class="ui-sidebar-overlay ui-collapse" th:include="portfolio/admin-template/sidebar-overlay"></div>
+</div>

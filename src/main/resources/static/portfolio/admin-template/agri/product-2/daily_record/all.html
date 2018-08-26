@@ -1,0 +1,34 @@
+<span th:fragment="sidebar" th:include="portfolio/admin-template/agri/sidebar"></span>
+
+<span th:fragment="container">
+    <nav aria-label="breadcrumb" class="ui-breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="?page=agri/all">ข้อมูลสินค้าเกษตร</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="?page=agri/product-2/all">กระเจี๊ยบแห้ง</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+                แบบบันทึกรายวัน
+            </li>
+        </ol>
+        <button class="btn btn-light ui-back-button">
+            <span class="fa fa-chevron-left"></span>
+            กลับ
+        </button>
+    </nav>
+
+    <div class="ui-container-header">
+        <span class="fa fa-pagelines"></span>
+        แบบบันทึกรายวัน
+
+        <a class="btn btn-success ui-add-button" href="?page=agri/product-2/daily_record/add">
+            <span class="fa fa-plus"></span>
+            <span class="text-center">เพิ่มข้อมูล</span>
+        </a>
+    </div>
+
+    <div th:include="portfolio/admin-template/agri/kform/daily_record/all"></div>
+
+</span>

@@ -1,0 +1,188 @@
+<style>
+    .ui-table-freeze__column:before{
+        height: 80px;
+    }
+
+    .ui-table-freeze .btn .fa{
+        margin-right: 0;
+    }
+
+    @media (min-width: 576px) { }
+
+    @media (max-width: 576px) {
+        .ui-row--text-overflow{
+            max-width: 100px;
+        }
+    }
+</style>
+
+<form class="ui-form">
+    <div class="row">
+        <div class="col-sm">
+            <div class="form-group">
+                <label for="year">ปี</label>
+                <div class="ui-select">
+                    <select id="year" class="form-control">
+                        <option>กรุณาเลือก</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="form-group">
+                <label for="product">สินค้า</label>
+                <div class="ui-select">
+                    <select id="product" class="form-control">
+                        <option>กรุณาเลือก</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div th:include="portfolio/admin-template/found-all" th:with="number='4'"></div>
+
+    <div class="ui-table-freeze--wrapper">
+        <div class="ui-table-freeze--scroller">
+            <table class="table table-sm ui-table-freeze ui-table-freeze--input ui-table--border">
+                <thead>
+                    <tr>
+                        <th scope="col" rowspan="2" class="ui-row__seq">ลำดับ</th>
+                        <th scope="col" rowspan="2">รายการ</th>
+                        <th scope="col" style="width: 100px;">ปี xxxx</th>
+                        <th scope="col" rowspan="2" class="text-center ui-table-freeze__column" style="width: 30px; height: 100px;">
+
+                        </th>
+                    </tr>
+                    <tr>
+                        <th> 
+                            ต้นทุนการผลิต
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>
+                            <button class="btn btn-light btn--small">
+                                <span class="fa fa-search"></span>
+                            </button>
+                            <div class="ui-row--text-overflow">
+                                ต้นทุนผันแปร
+                            </div>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="0.00"/>
+                        </td>
+                        <td class="ui-table-freeze__column">
+                            <div class="dropleft dropdown">
+                                <button class="btn btn-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="fa fa-ellipsis-v"></span>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item ui-dropdown-item--delete" data-toggle="modal" data-target="#deleteModal">
+                                        <span class="fa fa-trash"></span>
+                                        ลบ
+                                    </a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>
+                            <button class="btn btn-light btn--small">
+                                <span class="fa fa-search"></span>
+                            </button>
+                            <div class="ui-row--text-overflow">
+                                ต้นทุนคงที่
+                            </div>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="0.00"/>
+                        </td>
+                        <td class="ui-table-freeze__column">
+                            <div class="dropleft dropdown">
+                                <button class="btn btn-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="fa fa-ellipsis-v"></span>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item ui-dropdown-item--delete" data-toggle="modal" data-target="#deleteModal">
+                                        <span class="fa fa-trash"></span>
+                                        ลบ
+                                    </a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>
+                            <button class="btn btn-light btn--small">
+                                <span class="fa fa-search"></span>
+                            </button>
+                            <div class="ui-row--text-overflow">
+                                ต้นทุนรวมต่อไร่
+                            </div>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="0.00"/>
+                        </td>
+                        <td class="ui-table-freeze__column">
+                            <div class="dropleft dropdown">
+                                <button class="btn btn-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="fa fa-ellipsis-v"></span>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item ui-dropdown-item--delete" data-toggle="modal" data-target="#deleteModal">
+                                        <span class="fa fa-trash"></span>
+                                        ลบ
+                                    </a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>
+                            <button class="btn btn-light btn--small">
+                                <span class="fa fa-search"></span>
+                            </button>
+                            <div class="ui-row--text-overflow" title="ต้นทุนรวมต่อกิโลกรัม(บาท/ก.ก.)">
+                                ต้นทุนรวมต่อกิโลกรัม(บาท/ก.ก.)
+                            </div>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="0.00"/>
+                        </td>
+                        <td class="ui-table-freeze__column">
+                            <div class="dropleft dropdown">
+                                <button class="btn btn-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="fa fa-ellipsis-v"></span>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item ui-dropdown-item--delete" data-toggle="modal" data-target="#deleteModal">
+                                        <span class="fa fa-trash"></span>
+                                        ลบ
+                                    </a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <div class="text-right" style="margin-bottom: 1rem;">
+        <button class="btn btn-light btn-light--success btn--small">
+            <span class="fa fa-plus"></span>
+            เพิ่มรายการ
+        </button>
+    </div>
+
+    <div class="ui-form-footer">
+        <button type="submit" class="btn btn-light">ยกเลิก</button>
+        <button type="submit" class="btn btn-success ui-save-button">เพิ่ม</button>
+    </div>
+</form>

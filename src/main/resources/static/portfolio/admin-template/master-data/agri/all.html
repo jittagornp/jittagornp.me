@@ -1,0 +1,63 @@
+<span th:fragment="sidebar" th:include="portfolio/admin-template/master-data/sidebar"></span>
+
+<span th:fragment="container">
+    <nav aria-label="breadcrumb" class="ui-breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="?page=master-data/all">จัดการข้อมูลพื้นฐาน</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+                จัดการข้อมูลพื้นฐานสินค้าเกษตร
+            </li>
+        </ol>
+        <button class="btn btn-light ui-back-button">
+            <span class="fa fa-chevron-left"></span>
+            กลับ
+        </button>
+    </nav>
+
+    <div class="ui-container-header">
+        <span class="fa fa-database"></span>
+        จัดการข้อมูลพื้นฐานสินค้าเกษตร
+    </div>
+
+    <h4 class="ui-container-topic">สินค้า</h4>
+
+    <div class="list-group list-group-flush ui-list-group">
+        <a class="list-group-item" href="javascript:void(0)">
+            ข้อมูลสินค้า
+        </a>
+    </div>
+
+    <h4 class="ui-container-topic">คุณสมบัติ</h4>
+
+    <div class="list-group list-group-flush ui-list-group">
+        <a class="list-group-item" href="javascript:void(0)">
+            ข้อมูลคุณสมบัติ
+        </a>
+    </div>
+    
+    <h4 class="ui-container-topic">แหล่งข้อมูล</h4>
+
+    <div class="list-group list-group-flush ui-list-group">
+        <a class="list-group-item" href="?page=master-data/agri/source-type/all">
+            ประเภทแหล่งข้อมูล
+        </a>
+    </div>
+    
+    <h4 class="ui-container-topic">หน่วยนับ</h4>
+
+    <div class="list-group list-group-flush ui-list-group">
+        <a class="list-group-item" href="?page=master-data/agri/measuring-unit/all">
+            หน่วยมาตราวัด
+        </a>
+    </div>
+    
+    <h4 class="ui-container-topic">รหัส Harmonize</h4>
+
+    <div class="list-group list-group-flush ui-list-group">
+        <a class="list-group-item" href="?page=master-data/agri/harmonize-code/all">
+            ตารางรหัส Harmonize
+        </a>
+    </div>
+</span>

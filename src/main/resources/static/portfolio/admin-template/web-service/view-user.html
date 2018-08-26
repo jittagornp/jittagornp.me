@@ -1,0 +1,208 @@
+<span th:fragment="sidebar" th:include="portfolio/admin-template/web-service/sidebar"></span>
+
+<span th:fragment="container">
+
+    <nav aria-label="breadcrumb" class="ui-breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="?page=web-service/all">Web Service</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="?page=web-service/user">ผู้ใช้งาน Web Service</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+                ข้อมูลผู้ใช้งาน Web Service
+            </li>
+        </ol>
+        <button class="btn btn-light ui-back-button">
+            <span class="fa fa-chevron-left"></span>
+            กลับ
+        </button>
+    </nav>
+
+    <div class="ui-container-header">
+        <span class="fa fa-server"></span>
+        ข้อมูลผู้ใช้งาน Web Service
+    </div>
+
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="user-tab" data-toggle="tab" href="#user" role="tab" aria-controls="user" aria-selected="true">ข้อมูลผู้ใช้</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="stat-tab" data-toggle="tab" href="#stat" role="tab" aria-controls="stat" aria-selected="false">สถิติการใช้งาน</a>
+        </li>
+    </ul>
+
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="user" role="tabpanel" aria-labelledby="user-tab">
+            <form class="ui-form">
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="form-group">
+                            <label for="firstName">ชื่อ</label>
+                            <input type="text" class="form-control" id="firstName" placeholder="First Name" value="ระบบ A">
+                        </div>
+                        <div class="form-group">
+                            <label for="username">บัญชีผู้ใช้</label>
+                            <input type="text" class="form-control" id="username" placeholder="Username" disabled value="68a0e4a0-e328-4778-b167-142c4a0beb2a">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">รหัสผ่าน</label>
+                            <input type="password" class="form-control" id="password" placeholder="Password" value="*****">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">อีเมล</label>
+                            <input type="email" class="form-control" id="email" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="mobile">เบอร์โทรศัพท์</label>
+                            <input type="text" class="form-control" id="mobile" placeholder="Mobile">
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="form-group">
+                            <label for="under">หน่วยงาน</label>
+                            <input type="text" class="form-control" id="under" placeholder="Under" value="หน่วยงาน A">
+                        </div>
+                        <div class="form-group">
+                            <label for="description">คำอธิบายแก้ไขเติม</label>
+                            <textarea class="form-control" id="description" placeholder="Description"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="ui-form-footer">
+                    <button type="submit" class="btn btn-light">ยกเลิก</button>
+                    <button type="submit" class="btn btn-primary ui-save-button"><span class="fa fa-save"></span>บันทึก</button>
+                </div>
+            </form>
+        </div>
+        <div class="tab-pane fade" id="stat" role="tabpanel" aria-labelledby="stat-tab">
+
+            <div class="row">
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="start">ตั้งแต่</label>
+                        <div class="input-group">
+                            <input type="date" class="form-control" id="start" placeholder="Start Date">
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-light">
+                                    <span class="fa fa-calendar"></span>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm">
+                    <div class="form-group">
+                        <label for="end">ถึง</label>
+                        <div class="input-group">
+                            <input type="date" class="form-control" id="end" placeholder="End Date">
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-light">
+                                    <span class="fa fa-calendar"></span>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm">
+                    <button type="submit" class="btn btn-light" style="margin-right: 1rem">รีเซต</button>
+                    <button type="submit" class="btn btn-primary ui-save-button">ค้นหา</button>
+                </div>
+            </div>
+
+            <div th:include="portfolio/admin-template/found-all" th:with="number='3'"></div>
+
+            <div class="ui-table-freeze--wrapper">
+                <div class="ui-table-freeze--scroller">
+                    <table class="table table-sm ui-table-freeze">
+                        <thead>
+                            <tr>
+                                <th scope="col" class="ui-row__seq">ลำดับ</th>
+                                <th scope="col" style="width: 320px;">ชื่อ service</th>
+                                <th scope="col">url</th>
+                                <th scope="col">source</th>
+                                <th scope="col">เวลา</th>
+                                <th scope="col" class="text-center ui-table-freeze__column">
+
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>ราคาข้าวรายวัน</td>
+                                <td>/ws/price/rice</td>
+                                <td>56.10.18.1</td>
+                                <td>
+                                    <span class="ui-datetime">1 ม.ค. 2561 12:30 น.</span>
+                                </td>
+                                <td class="ui-table-freeze__column">
+                                    <div class="dropleft dropdown">
+                                        <button class="btn btn-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="fa fa-ellipsis-v"></span>
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="javascript:void(0)">รายละเอียด</a>
+
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>ราคาข้าวรายวัน</td>
+                                <td>/ws/price/rice</td>
+                                <td>56.10.18.1</td>
+                                <td>
+                                    <span class="ui-datetime">1 ม.ค. 2561 12:30 น.</span>
+                                </td>
+                                <td class="ui-table-freeze__column">
+                                    <div class="dropleft dropdown">
+                                        <button class="btn btn-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="fa fa-ellipsis-v"></span>
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="javascript:void(0)">รายละเอียด</a>
+
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>ราคาข้าวรายวัน</td>
+                                <td>/ws/price/rice</td>
+                                <td>56.10.18.1</td>
+                                <td>
+                                    <span class="ui-datetime">1 ม.ค. 2561 12:30 น.</span>
+                                </td>
+                                <td class="ui-table-freeze__column">
+                                    <div class="dropleft dropdown">
+                                        <button class="btn btn-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <span class="fa fa-ellipsis-v"></span>
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="javascript:void(0)">รายละเอียด</a>
+
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div th:include="portfolio/admin-template/pagination"></div>
+        </div>
+    </div>
+
+
+
+</span>

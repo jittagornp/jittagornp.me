@@ -1,0 +1,531 @@
+<span th:fragment="sidebar" th:include="portfolio/admin-template/web-service/sidebar"></span>
+
+<span th:fragment="container">
+
+    <style>
+        .ui-sidebar{
+            display: none;
+        }
+
+        .ui-container,
+        .ui-container .container:before{
+            margin-left: 0;
+        }
+
+        .ui-breadcrumb,
+        .ui-sidebar-toggle,
+        .ui-username,
+        .ui-system-menu-toggle,
+        .ui-header-menu-toggle{
+            display: none;
+        }
+
+        .list-group-item{
+            color: #52493c !important;
+        }
+        
+        .ui-container-header.ui--fixed{
+            left: 0;
+        }
+        
+        .ui-appname{
+            display: block !important;
+        }
+    </style>
+
+    <nav aria-label="breadcrumb" class="ui-breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="?page=web-service/all">Web Service</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+                Web Service ทั้งหมด
+            </li>
+        </ol>
+        <button class="btn btn-light ui-back-button">
+            <span class="fa fa-chevron-left"></span>
+            กลับ
+        </button>
+    </nav>
+
+    <div class="ui-container-header">
+        <span class="fa fa-server"></span>
+        Web Service ทั้งหมด
+    </div>
+
+    <h4 class="ui-container-topic">ระบบฐานข้อมูลสินค้าการเกษตร</h4>
+
+    <div class="list-group list-group-flush">
+        <a class="list-group-item" href="javascript:void(0)">
+            1. การติดตามภาวะตลาด
+        </a>
+        <a class="list-group-item" href="javascript:void(0)">
+            2. ราคาขายส่งและขายปลีก
+        </a>
+        <a class="list-group-item" href="javascript:void(0)">
+            3. ราคา ณ แหล่งผลิต
+        </a>
+        <a class="list-group-item" href="javascript:void(0)">
+            4. แบบบันทึกรายวัน
+        </a>
+        <a class="list-group-item" href="javascript:void(0)">
+            5. ปริมาณและมูลค่าการนำเข้า-ส่งออก
+        </a>
+        <a class="list-group-item" href="javascript:void(0)">
+            6. ต้นทุนการผลิต
+        </a>
+        <a class="list-group-item" href="javascript:void(0)">
+            7. ปริมาณผลผลิต
+        </a>
+    </div>
+
+    <h4 class="ui-container-topic">ระบบฐานข้อมูลการค้าภายในประเทศ</h4>
+
+    <div class="list-group list-group-flush">
+        <div class="accordion" id="accordion">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                            กล่ม กทม.
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapse1" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        <a class="list-group-item" href="javascript:void(0)">
+                            1. เปรียบเทียบราคาขายส่ง
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            2. เปรียบเทียบราคาขายปลีก
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            3. เปรียบเทียบราคาผักสด
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            4. เปรียบเทียบราคาขายปลีก-ขายส่ง
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            5. การติดตามภาวะและราคาสินค้าในตลาด กทม.
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            6. การติดตามภาวะตลาดสินค้าใน กทม.
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            7. การติดตามภาวะตลาดและราคาสินค้าใน กทม.
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            8. ปริมาณและมูลค่าการนำเข้าสินค้า
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse2" aria-expanded="true" aria-controls="collapse2">
+                            กลุ่ม สก. 1
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapse2" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        <a class="list-group-item" href="javascript:void(0)">
+                            1. แบบภาวะการซื้อขายข้าวเปลือกประจำวัน (สก. 1)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            2. สรุปราคาลาดกลาง (สก. 1)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            3. สรุุปราคาท่าข้าว (สก. 1)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            4. สรุปราคาโรงสี (สก. 1)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            5. สรุปราคาเกษตรกรขายได้ (สก. 1)
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse3" aria-expanded="true" aria-controls="collapse3">
+                            กลุ่ม สก. 2
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapse3" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        <a class="list-group-item" href="javascript:void(0)">
+                            1. ภาวะราคาขายปลีก-ขายส่งข้าวสารและราคาข้าวเปลือก (สก. 2)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            2. สรุปราคาขายปลีกข้าวสารรายภาค (สก. 2)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            3. สรุุปราคาขายส่งข้าวสารรายภาค (สก. 2)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            4. สรุปราคาซื้อขายข้าวเปลือกส่วนใหญ่ (สก. 2)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            5. สรุปราคาเกษตรกรขายได้ (สก. 2)
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse4" aria-expanded="true" aria-controls="collapse4">
+                            กลุ่ม สก. 3
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapse4" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        <a class="list-group-item" href="javascript:void(0)">
+                            1. แบบประเมินปริมาณข้าวคงเหลือในจังหวัด (สก. 3)
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse5" aria-expanded="true" aria-controls="collapse5">
+                            กลุ่ม สก. 4
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapse5" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        <a class="list-group-item" href="javascript:void(0)">
+                            1. ภาวะสินค้า ลิ้นจี่ (สก. 4)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            2. ภาวะสินค้า สับประรด (สก. 4)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            3. ภาวะสินค้า ทุเรียน (สก. 4)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            4. ภาวะสินค้า เงาะ (สก. 4)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            5. ภาวะสินค้า มังคุด (สก. 4)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            6. ภาวะสินค้า มะพร้าวน้ำหอม (สก. 4)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            7. ภาวะสินค้า มะนาว (สก. 4)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            8. ภาวะสินค้า มะเขือเทศ (สก. 4)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            9. ภาวะสินค้า หน่อไม้ไผ่ตรง (สก. 4)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            10. ภาวะสินค้า ขิง (สก. 4)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            11. ภาวะสินค้า พริกไทย (สก. 4)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            12. ภาวะสินค้า พริก (สก. 4)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            13. ภาวะสินค้า มะขามหวาน (สก. 4)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            14. ภาวะราคาสินค้า ลองกอง (สก. 4)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            15. ภาวะสินค้า พริกหัวเรือ (สก. 4)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            16. ภาวะสินค้า ส้มเขียวหวาน (สก. 4)
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse6" aria-expanded="true" aria-controls="collapse6">
+                            กลุ่ม สก. 5
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapse6" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        <a class="list-group-item" href="javascript:void(0)">
+                            1. ภาวะสินค้า ลำไย (สก. 5)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            2. สรุปราคาโรงงานรับซื้อ (สก. 5)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            3. สรุปราคาผู้ส่งออกรับซื้อ (สก. 5)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            4. สรุปราคาเกษตรกรขายได้ (สก. 5)
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse7" aria-expanded="true" aria-controls="collapse7">
+                            กลุ่ม สก. 6
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapse7" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        <a class="list-group-item" href="javascript:void(0)">
+                            1. ภาวะสินค้า มันสำปะหลัง (สก. 6)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            2. ภาวะสินค้า ข้าวโพดเลี้ยงสัตว์ (สก. 6)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            3. ภาวะสินค้า ข้าวฟ่างเลี้ยงสัตว์ (สก. 6)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            4. ภาวะสินค้า ปลาป่น (สก. 6)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            5. ภาวะสินค้า มะพร้าว (สก. 6)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            6. ภาวะสินค้า ถั่วเหลือง (สก. 6)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            7. แบบภาวะสินค้า ทานตะวัน (สก. 6)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            8. สรุปราคาเกษตรกรขายได้ (สก. 6)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            9. สรุปราคาไซโลรับซื้อ (สก. 6)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            10. สรุปราคาโรงงานอาหารสัตว์รับซื้อ (สก. 6)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            11. สรุปราคาโรงงานหรือผู้ส่งออกรับซื้อ (สก. 6)
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse8" aria-expanded="true" aria-controls="collapse8">
+                            กลุ่ม สก. 7
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapse8" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        <a class="list-group-item" href="javascript:void(0)">
+                            1. ภาวะสินค้า ปาล์มน้ำมัน (สก. 7)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            2. สรุปราคาเกษตรกรขายได้ (สก. 7)
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse9" aria-expanded="true" aria-controls="collapse9">
+                            กลุ่ม สก. 8
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapse9" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        <a class="list-group-item" href="javascript:void(0)">
+                            1. ภาวะสินค้า กระเทียม (สก. 8)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            2. ภาวะสินค้า หอมแดง (สก. 8)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            3. ภาวะสินค้า หัวหอมใหญ่ (สก. 8)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            4. ภาวะสินค้า มันฝรั่ง (สก. 8)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            5. ภาวะสินค้า เมล็ดกาแฟ (สก. 8)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            6. ภาวะสินค้า ละหุ่ง (สก. 8)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            7. ภาวะสินค้า มะม่วงหิมพานต์ (สก. 8)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            8. ภาวะสินค้า ถั่วเขียวผิวมัน (สก. 8)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            9. ภาวะสินค้า ถั่วเขียวผิวดำ (สก. 8)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            10. ภาวะสินค้า ถั่วลิสง (สก. 8)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            11. ภาวะสินค้า ถั่วนิ้วนางแดง (สก. 8)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            12. ภาวะสินค้า ลูกเดือย (สก. 8)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            13. ภาวะสินค้า งา (สก. 8)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            14. ภาวะสินค้า ฝ้าย (สก. 8)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            15. ภาวะสินค้า ปอ (สก. 8)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            16. ภาวะสินค้า น้ำตาลมะพร้าว (สก. 8)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            17. ภาวะสินค้า ยางพารา (สก. 8)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            18. สรุปราคาเกษตรกรขายได้ (สก. 8)
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse10" aria-expanded="true" aria-controls="collapse10">
+                            กลุ่ม สก. 9
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapse10" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        <a class="list-group-item" href="javascript:void(0)">
+                            1. ภาวะสินค้า รังไหม - เส้นไหม (สก. 9)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            2. สรุปราคาเกษตรกรขายได้ (สก. 9)
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse11" aria-expanded="true" aria-controls="collapse11">
+                            กลุ่ม สก. 10
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapse11" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        <a class="list-group-item" href="javascript:void(0)">
+                            1. ภาวะสินค้า สุกร (สก. 10)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            2. ภาวะสินค้า ไก่เนื้อ (สก. 10)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            3. ภาวะสินค้า ไข่ไก่ (สก. 10)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            4. ภาวะสินค้า กุ้งกุลาดำและกุ้งขาว (สก. 10)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            5. ภาวะสินค้า ปลาโอ (สก. 10)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            6. ภาวะสินค้า ตะพาบน้ำ (สก. 10)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            7. ภาวะสินค้า เกลือทะเล (สก. 10)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            8. ภาวะสินค้า เกลือสินเธาว์ (สก. 10)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            9. ภาวะสินค้า ปลานิล (สก. 10)
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            10. สรุปราคาเกษตรกรขายได้ (สก. 10)
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapse12" aria-expanded="true" aria-controls="collapse12">
+                            ข้าวและผลิตภัณฑ์
+                        </button>
+                    </h5>
+                </div>
+
+                <div id="collapse12" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        <a class="list-group-item" href="javascript:void(0)">
+                            1. ราคาขายส่งข้าว ผลิตภัณฑ์ และกระสอบป่าน ประจำวัน
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            2. ราคาขายปลีกข้าวสารในตลาดกรุงเทพฯ ประจำวัน
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            3. ราคาข้าวสารบรรจุถุงที่ห้างสรรพสินค้าจำหน่ายประจำวัน
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            4. ภาวะตลาดสินค้าข้าว
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            5. ข้าวเปลือกภูมิภาค
+                        </a>
+                        <a class="list-group-item" href="javascript:void(0)">
+                            6. ข้าวสารส่งในตลาดกรุงเทพ ฯ ณ โกดังผู้ส่งออก
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</span>

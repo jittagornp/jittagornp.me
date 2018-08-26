@@ -1,0 +1,123 @@
+<span th:fragment="sidebar" th:include="portfolio/admin-template/web-service/sidebar"></span>
+
+<span th:fragment="container">
+
+    <nav aria-label="breadcrumb" class="ui-breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="?page=web-service/all">Web Service</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+                ผู้ใช้งาน Web Service
+            </li>
+        </ol>
+        <button class="btn btn-light ui-back-button">
+            <span class="fa fa-chevron-left"></span>
+            กลับ
+        </button>
+    </nav>
+
+    <div class="ui-container-header">
+        <span class="fa fa-server"></span>
+        ผู้ใช้งาน Web Service
+
+        <a class="btn btn-success ui-add-button" href="?page=web-service/add-user">
+            <span class="fa fa-plus"></span>
+            <span class="text-center">เพิ่มข้อมูล</span>
+        </a>
+    </div>
+
+    <div class="input-group ui-search-input" style="margin-bottom: 1rem;">
+        <input type="text" class="form-control" placeholder="ค้นหาด้วย username, ชื่อ"/>
+        <span class="input-group-btn">
+            <button type="button" class="btn btn-light">ค้นหา</button>
+        </span>
+    </div>
+
+    <div th:include="portfolio/admin-template/found-all" th:with="number='3'"></div>
+
+    <div class="ui-table-freeze--wrapper">
+        <div class="ui-table-freeze--scroller">
+            <table class="table table-sm ui-table-freeze">
+                <thead>
+                    <tr>
+                        <th scope="col" class="ui-row__seq">ลำดับ</th>
+                        <th scope="col" style="width: 320px;">username</th>
+                        <th scope="col">ชื่อ</th>
+                        <th scope="col" class="text-center ui-table-freeze__column">
+
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>68a0e4a0-e328-4778-b167-142c4a0beb2a</td>
+                        <td>ระบบ A</td>
+                        <td class="ui-table-freeze__column">
+                            <div class="dropleft dropdown">
+                                <button class="btn btn-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="fa fa-ellipsis-v"></span>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="?page=web-service/view-user"><span class="fa fa-eye"></span>ดูข้อมูล</a>
+                                    <a class="dropdown-item" href="javascript:void(0)">รีเซตรหัสผ่าน</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item ui-dropdown-item--delete" data-toggle="modal" data-target="#deleteModal">
+                                        <span class="fa fa-trash"></span>
+                                        ลบ
+                                    </a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>de425ae7-a4bd-4b7a-a72f-a9a2cf87fa0c</td>
+                        <td>ระบบ B</td>
+                        <td class="ui-table-freeze__column">
+                            <div class="dropleft dropdown">
+                                <button class="btn btn-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="fa fa-ellipsis-v"></span>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="?page=web-service/view-user"><span class="fa fa-eye"></span>ดูข้อมูล</a>
+                                    <a class="dropdown-item" href="javascript:void(0)">รีเซตรหัสผ่าน</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item ui-dropdown-item--delete" data-toggle="modal" data-target="#deleteModal">
+                                        <span class="fa fa-trash"></span>
+                                        ลบ
+                                    </a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>1ae4e96d-5137-447c-9487-c3d796606bdf</td>
+                        <td>ระบบ C</td>
+                        <td class="ui-table-freeze__column">
+                            <div class="dropleft dropdown">
+                                <button class="btn btn-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="fa fa-ellipsis-v"></span>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="?page=web-service/view-user"><span class="fa fa-eye"></span>ดูข้อมูล</a>
+                                    <a class="dropdown-item" href="javascript:void(0)">รีเซตรหัสผ่าน</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item ui-dropdown-item--delete" data-toggle="modal" data-target="#deleteModal">
+                                        <span class="fa fa-trash"></span>
+                                        ลบ
+                                    </a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div th:include="portfolio/admin-template/pagination"></div>
+
+</span>

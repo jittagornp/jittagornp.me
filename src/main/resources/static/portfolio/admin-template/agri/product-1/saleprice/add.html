@@ -1,0 +1,42 @@
+<span th:fragment="sidebar" th:include="portfolio/admin-template/agri/sidebar"></span>
+
+<span th:fragment="container">
+    <nav aria-label="breadcrumb" class="ui-breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="?page=agri/all">ข้อมูลสินค้าเกษตร</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="?page=agri/product-1/all">ข้าว</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="?page=agri/product-1/saleprice/all">ราคาขายข้าว</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+                เพิ่มข้อมูล
+            </li>
+        </ol>
+        <button class="btn btn-light ui-back-button">
+            <span class="fa fa-chevron-left"></span>
+            กลับ
+        </button>
+    </nav>
+
+    <div class="ui-save-alert alert alert-success" role="alert">
+        <span class="fa fa-save"></span>
+        เพิ่มข้อมูลเสร็จเรียบร้อย
+    </div>
+
+    <div class="ui-container-header">
+        <span class="fa fa-pagelines"></span>
+        เพิ่มราคาขายข้าว
+
+        <button class="btn btn-primary ui-setting-button">
+            <span class="fa fa-cog"></span>
+            <span class="text-center">ตัวแลือก</span>
+        </button>
+    </div>
+
+    <div th:include="portfolio/admin-template/agri/kform/saleprice/add"></div>
+
+</span>

@@ -1,0 +1,184 @@
+<span th:fragment="sidebar" th:include="portfolio/admin-template/document-management/sidebar"></span>
+
+<span th:fragment="subMenu" th:include="portfolio/admin-template/document-management/submenu"></span>
+
+<span th:fragment="container">
+
+    <nav aria-label="breadcrumb" class="ui-breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="?page=document-management/all">จัดการเอกสาร</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+                ถังขยะ
+            </li>
+        </ol>
+        <button class="btn btn-light ui-back-button">
+            <span class="fa fa-chevron-left"></span>
+            กลับ
+        </button>
+    </nav>
+
+    <div class="ui-save-alert alert alert-success" role="alert">
+        <span class="fa fa-save"></span>
+        เพิ่มข้อมูลเสร็จเรียบร้อย
+    </div>
+
+    <div class="ui-container-header">
+        <span class="fa fa-trash"></span>
+        ถังขยะ
+
+        <button class="btn btn-danger" 
+                style="float: right; margin-right: 0rem;">
+            ล้างถังขยะ
+        </button>
+    </div>
+
+    <div th:include="portfolio/admin-template/found-all" th:with="number='20'"></div>
+
+    <div class="ui-table-freeze--wrapper">
+        <div class="ui-table-freeze--scroller">
+            <table class="table table-sm ui-table-freeze">
+                <thead>
+                    <tr>
+                        <th scope="col" class="ui-row__seq">ลำดับ</th>
+                        <th scope="col">ชื่อ</th>
+                        <th scope="col">ลบเมื่อ</th>
+                        <th scope="col" class="text-center ui-table-freeze__column">
+
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>
+                            <span class="fa fa-file ui-fa-file"></span>
+                            File 1
+                        </td>
+                        <td>
+                            <span class="ui-datetime">1 ม.ค. 2561 12:30 น.</span>
+                        </td>
+                        <td class="ui-table-freeze__column">
+                            <div class="dropleft dropdown">
+                                <button class="btn btn-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="fa fa-ellipsis-v"></span>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="javascript:void(0)"><span class="fa fa-eye"></span>ดูข้อมูล</a>
+                                    <a class="dropdown-item" href="javascript:void(0)">ยกเลิกการลบ</a>
+                                    <a class="dropdown-item ui-dropdown-item--delete" data-toggle="modal" data-target="#deleteModal">
+                                        <span class="fa fa-trash"></span>
+                                        ลบ
+                                    </a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>
+                            <span class="fa fa-file ui-fa-file"></span>
+                            File 2
+                        </td>
+                        <td>
+                            <span class="ui-datetime">1 ม.ค. 2561 12:30 น.</span>
+                        </td>
+                        <td class="ui-table-freeze__column">
+                            <div class="dropleft dropdown">
+                                <button class="btn btn-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="fa fa-ellipsis-v"></span>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="javascript:void(0)"><span class="fa fa-eye"></span>ดูข้อมูล</a>
+                                    <a class="dropdown-item" href="javascript:void(0)">ยกเลิกการลบ</a>
+                                    <a class="dropdown-item ui-dropdown-item--delete" data-toggle="modal" data-target="#deleteModal">
+                                        <span class="fa fa-trash"></span>
+                                        ลบ
+                                    </a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>
+                            <span class="fa fa-file ui-fa-file"></span>
+                            File 3
+                        </td>
+                        <td>
+                            <span class="ui-datetime">1 ม.ค. 2561 12:30 น.</span>
+                        </td>
+                        <td class="ui-table-freeze__column">
+                            <div class="dropleft dropdown">
+                                <button class="btn btn-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="fa fa-ellipsis-v"></span>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="javascript:void(0)"><span class="fa fa-eye"></span>ดูข้อมูล</a>
+                                    <a class="dropdown-item" href="javascript:void(0)">ยกเลิกการลบ</a>
+                                    <a class="dropdown-item ui-dropdown-item--delete" data-toggle="modal" data-target="#deleteModal">
+                                        <span class="fa fa-trash"></span>
+                                        ลบ
+                                    </a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>
+                            <span class="fa fa-folder ui-fa-folder"></span>
+                            Folder 1
+                        </td>
+                        <td>
+                            <span class="ui-datetime">1 ม.ค. 2561 12:30 น.</span>
+                        </td>
+                        <td class="ui-table-freeze__column">
+                            <div class="dropleft dropdown">
+                                <button class="btn btn-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="fa fa-ellipsis-v"></span>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="javascript:void(0)"><span class="fa fa-eye"></span>ดูข้อมูล</a>
+                                    <a class="dropdown-item" href="javascript:void(0)">ยกเลิกการลบ</a>
+                                    <a class="dropdown-item ui-dropdown-item--delete" data-toggle="modal" data-target="#deleteModal">
+                                        <span class="fa fa-trash"></span>
+                                        ลบ
+                                    </a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>
+                            <span class="fa fa-folder ui-fa-folder"></span>
+                            Folder 2
+                        </td>
+                        <td>
+                            <span class="ui-datetime">1 ม.ค. 2561 12:30 น.</span>
+                        </td>
+                        <td class="ui-table-freeze__column">
+                            <div class="dropleft dropdown">
+                                <button class="btn btn-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="fa fa-ellipsis-v"></span>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="javascript:void(0)"><span class="fa fa-eye"></span>ดูข้อมูล</a>
+                                    <a class="dropdown-item" href="javascript:void(0)">ยกเลิกการลบ</a>
+                                    <a class="dropdown-item ui-dropdown-item--delete" data-toggle="modal" data-target="#deleteModal">
+                                        <span class="fa fa-trash"></span>
+                                        ลบ
+                                    </a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div th:include="portfolio/admin-template/pagination"></div>
+</span>

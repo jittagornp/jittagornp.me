@@ -1,0 +1,250 @@
+<style>
+    .ui-table-freeze__column:before{
+        height: 120px;   
+    }
+</style>
+
+<form class="ui-form">
+    <div class="row">
+        <div class="col-sm">
+            <div class="form-group">
+                <label for="year">ปี</label>
+                <div class="ui-select">
+                    <select id="year" class="form-control">
+                        <option>กรุณาเลือก</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm">
+            <div class="form-group">
+                <label for="product">สินค้า</label>
+                <div class="ui-select">
+                    <select id="product" class="form-control">
+                        <option>กรุณาเลือก</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div th:include="portfolio/admin-template/found-all" th:with="number='4'"></div>
+
+    <div class="ui-table-freeze--wrapper">
+        <div class="ui-table-freeze--scroller">
+            <table class="table table-sm ui-table-freeze ui-table-freeze--input ui-table--border">
+                <thead>
+                    <tr>
+                        <th scope="col" rowspan="3" class="ui-row__seq">ลำดับ</th>
+                        <th scope="col" rowspan="3">จังหวัด</th>
+                        <th scope="col" style="width: 40%;" colspan="8">ปี xxxx</th>
+                        <th rowspan="3" class="ui-table-freeze__column" style="height: 122px;"></th>
+                    </tr>
+                    <tr>
+                        <th scope="col" colspan="4">รุ่น 1</th>
+                        <th scope="col" colspan="4">รุ่น 2</th>
+                    </tr>
+                    <tr>
+                        <th scope="col">เนื้อที่ให้ผล (ไร่)</th>
+                        <th scope="col">เนื้อที่เก็บเกี่ยว (ไร่)</th>
+                        <th scope="col">ผลผลิต (ตัน)</th>
+                        <th scope="col">ผลผลิตต่อไร่/ปลูก (กิโลกรัม)</th>
+
+                        <th scope="col">เนื้อที่ให้ผล (ไร่)</th>
+                        <th scope="col">เนื้อที่เก็บเกี่ยว (ไร่)</th>
+                        <th scope="col">ผลผลิต (ตัน)</th>
+                        <th scope="col">ผลผลิตต่อไร่/ปลูก (กิโลกรัม)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>xxxxxxxxxxxxxxxxxxxxxxxx</td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="0.00"/>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="0.00"/>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="0.00"/>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="0.00"/>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="0.00"/>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="0.00"/>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="0.00"/>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="0.00"/>
+                        </td>
+                        <td class="ui-table-freeze__column">
+                            <div class="dropleft dropdown">
+                                <button class="btn btn-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="fa fa-ellipsis-v"></span>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="javascript:void(0)"><span class="fa fa-pencil"></span>แก้ไขข้อมูล</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item ui-dropdown-item--delete" data-toggle="modal" data-target="#deleteModal">
+                                        <span class="fa fa-trash"></span>
+                                        ลบ
+                                    </a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>xxxxxxxxxxxxxxxxxxxxxxxx</td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="0.00"/>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="0.00"/>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="0.00"/>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="0.00"/>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="0.00"/>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="0.00"/>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="0.00"/>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="0.00"/>
+                        </td>
+                        <td class="ui-table-freeze__column">
+                            <div class="dropleft dropdown">
+                                <button class="btn btn-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="fa fa-ellipsis-v"></span>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="javascript:void(0)"><span class="fa fa-pencil"></span>แก้ไขข้อมูล</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item ui-dropdown-item--delete" data-toggle="modal" data-target="#deleteModal">
+                                        <span class="fa fa-trash"></span>
+                                        ลบ
+                                    </a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>xxxxxxxxxxxxxxxxxxxxxxxx</td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="0.00"/>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="0.00"/>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="0.00"/>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="0.00"/>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="0.00"/>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="0.00"/>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="0.00"/>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="0.00"/>
+                        </td>
+                        <td class="ui-table-freeze__column">
+                            <div class="dropleft dropdown">
+                                <button class="btn btn-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="fa fa-ellipsis-v"></span>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="javascript:void(0)"><span class="fa fa-pencil"></span>แก้ไขข้อมูล</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item ui-dropdown-item--delete" data-toggle="modal" data-target="#deleteModal">
+                                        <span class="fa fa-trash"></span>
+                                        ลบ
+                                    </a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>xxxxxxxxxxxxxxxxxxxxxxxx</td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="0.00"/>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="0.00"/>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="0.00"/>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="0.00"/>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="0.00"/>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="0.00"/>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="0.00"/>
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" placeholder="0.00"/>
+                        </td>
+                        <td class="ui-table-freeze__column">
+                            <div class="dropleft dropdown">
+                                <button class="btn btn-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="fa fa-ellipsis-v"></span>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="javascript:void(0)"><span class="fa fa-pencil"></span>แก้ไขข้อมูล</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item ui-dropdown-item--delete" data-toggle="modal" data-target="#deleteModal">
+                                        <span class="fa fa-trash"></span>
+                                        ลบ
+                                    </a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="text-right" style="margin-bottom: 1rem;">
+        <button class="btn btn-light btn-light--success btn--small">
+            <span class="fa fa-plus"></span>
+            เพิ่มรายการ
+        </button>
+    </div>
+
+    <div th:include="portfolio/admin-template/pagination"></div>
+
+    <div class="ui-form-footer">
+        <button type="submit" class="btn btn-light">ยกเลิก</button>
+        <button type="submit" class="btn btn-success ui-save-button">เพิ่ม</button>
+    </div>
+</form>

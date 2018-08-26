@@ -1,0 +1,65 @@
+<span th:if="${hasSubMenu}">
+    <style>
+        .ui-sidebar-overlay{
+            position: fixed;
+            top : 56px;
+            left: 0;
+            bottom: 0;
+            width: 240px;
+            z-index: 4;
+            background-color: #fff;
+            border-right: 1px solid #ebebeb;
+        }
+
+        .ui-sidebar-overlay.ui-collapse{
+            top: 100%;
+            margin-top: -40px; 
+            border-radius: 3px 0 0 3px;
+        }
+
+        .ui-sidebar-overlay-header{
+            width: 100%;
+            height: 40px;
+            border-bottom: 1px solid #e0e0e0;
+            text-align: center;
+            padding-top: 5px;
+            background-color: #fbfbfb;
+        }
+
+        .ui-sidebar-overlay.ui-collapse .ui-sidebar-overlay-header{
+            border-top: 1px solid #e0e0e0;
+            border-bottom: none;
+        }
+
+        .ui-sidebar-overlay-toggle{
+            border: solid 1px #cccccc;
+            padding: 0px 10px;
+            color: #7b7b7b;
+        }
+
+        .ui-sidebar-overlay-body{
+            position: absolute;
+            top : 40px;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            overflow: auto;
+        }
+
+        @media (min-width : 1200px){
+            .ui-sidebar-overlay{
+                box-shadow: none !important;
+            }
+        }
+    </style>
+
+    <div class="ui-sidebar-overlay-header">
+        <button class="btn btn-light ui-sidebar-overlay-toggle">
+            <span class="fa fa-angle-up"></span>
+            <span class="text-center">แสดง</span>
+        </button>
+    </div>
+    <div class="ui-sidebar-overlay-body">
+        <div th:replace="${container == null ? 'blank' : container} :: subMenu"></div>
+    </div>
+</span>
