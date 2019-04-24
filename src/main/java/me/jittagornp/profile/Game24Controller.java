@@ -31,7 +31,7 @@ public class Game24Controller {
                 && q.matches("^[\\d]+$");
     }
 
-    @GetMapping("/game24")
+    @GetMapping("/api/game24")
     public Set<String> getResult(@RequestParam(value = "q", required = false) String q, HttpServletResponse httpResp) throws IOException {
         if (!isValidInput(q)) {
             httpResp.sendError(HttpServletResponse.SC_BAD_REQUEST, "require query string \"q\" as a number 4 digit.");

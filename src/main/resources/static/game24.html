@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Game24</title>
+        <meta charset="UTF-8">
+        <link rel="shortcut icon" href="image/favicon.png"/>
+        <meta name="description" content="Game 24">
+        <meta name="keywords" content="Game 24">
+        <meta name="author" content="Jittagorn Pitakmetagoon">
+        <meta property="og:title" content="Game 24" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:url" content="http://jittagornp.me/game24" />
+        <meta property="og:image" content="image/me.jpg" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <style>
+            #result li{
+                list-style-type: decimal;
+                padding: 5px 1px;
+                border-top: solid 1px #e8e8e8;
+            }
+
+            #result{
+                margin-top: 10px;
+            }
+            
+            #result ul{
+                padding-left: 2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Game 24</h1>
+        <input id="number" type="text"/>
+        <button id="getResultButton">Get Solution</button>
+        <div id="result"></div>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript">
+            (function ($) {
+                $(function () {
+                    function isValid(numb) {
+                        return !!numb
+                                && numb.length === 4
+                                & /^[\d]+$/ig.test(numb);
+                    }
+
+                    var $result = $('#result');
+
+                    $('#getResultButton').on('click', function () {
+                        processing();
+                    });
+
+                    $('#number').on('keypress', function (event) {
+                        if (event.keyCode === 13) {
+                            processing();
+                        }
+                    });
+
+                    function processing() {
+                        var numb = $('#number').val();
+                        if (!isValid(numb)) {
+                            $result.text('Require input is a number 4 digits.');
+                        } else {
+                            $result.text('Processing...');
+                            $.get('/api/game24?q=' + numb).success(function (resp) {
+                                if (!resp.length) {
+                                    $result.text('Don\'t have solution.');
+                                } else {
+                                    $result.text('').append('Found ' + resp.length + ' solutions.');
+                                    var $ul = $('<ul/>');
+                                    for (var i = 0; i < resp.length; i++) {
+                                        $ul.append($('<li/>').text(resp[i]));
+                                    }
+                                    $result.append($ul);
+                                }
+                                var $ul = $('<ul/>');
+                            }).error(function (resp) {
+                                $result.text('Have an error between processing, Sorry.');
+                            });
+                        }
+                    }
+                });
+            })(jQuery);
+        </script>
+    </body>
+</html>
