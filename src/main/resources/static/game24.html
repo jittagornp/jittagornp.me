@@ -34,7 +34,7 @@
         <h1>Game 24</h1>
         <input id="number" type="text"/>
         <button id="getResultButton">Get Solution</button>
-        <div id="result"></div>
+        <div id="result">Please input a number 4 digits, such as 1234.</div>
         <script type="text/javascript" src="js/jquery.min.js"></script>
         <script type="text/javascript">
             (function ($) {
@@ -60,7 +60,7 @@
                     function processing() {
                         var numb = $('#number').val();
                         if (!isValid(numb)) {
-                            $result.text('Require input is a number 4 digits.');
+                            $result.text('Require input is a number 4 digits, such as 1234.');
                         } else {
                             $result.text('Processing...');
                             $.get('/api/game24?q=' + numb).success(function (resp) {
