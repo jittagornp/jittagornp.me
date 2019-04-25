@@ -15,6 +15,11 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <style>
+			body{
+				padding : 15px;
+				margin : 0;
+			}
+		
             #result li{
                 list-style-type: decimal;
                 padding: 5px 1px;
@@ -28,6 +33,25 @@
             #result ul{
                 padding-left: 2rem;
             }
+			
+			#number{
+				font-size : 1.5rem;
+				display : block;
+				padding : 5px;
+				border : solid 1px #999;
+				width : 300px;
+			}
+			
+			#getAnswerButton{
+				font-size : 1.5rem;
+				padding : 5px;
+				background-color : #3297fd;
+				border : none;
+				border-radius : 5px;
+				margin-top : 0.5rem;
+				color : #fff;
+				width : 311px;
+			}
         </style>
     </head>
     <body>
@@ -751,8 +775,11 @@
             };
         </script>
         <h1>เฉลย (Solve) Game 24</h1>
-        <input id="number" type="text" maxlength="4"/>
-        <button id="getResultButton">เฉย (Get answer)</button>
+		<p>
+			<a href="https://web.facebook.com/jittagornp" target="_blank"> by jittagornp</a>
+		</p>
+        <input id="number" type="text" maxlength="4" placeholder="1234"/>
+        <button id="getAnswerButton">เฉย (Get answer)</button>
         <div id="result">
             กรุณากรอกตัวเลข 4 หลัก เช่น 1234 
             (Please input a number 4 digits, such as 1234.)
@@ -777,7 +804,7 @@
                     }
 
                     var $input = $('#number');
-                    var $button = $('#getResultButton');
+                    var $button = $('#getAnswerButton');
                     var $result = $('#result');
                     
                     $button.on('click', function () {
