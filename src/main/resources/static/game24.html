@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Game24</title>
+        <title>เฉลย (Solve) Game 24</title>
         <meta charset="UTF-8">
         <link rel="shortcut icon" href="image/favicon.png"/>
-        <meta name="description" content="Get Solution of Game 24">
-        <meta name="keywords" content="Game 24,Solution,math 24 เฉลย,Game 24 เฉลย,24 Solver">
+        <meta name="description" content="เฉลย (Solve) Game 24">
+        <meta name="keywords" content="Game 24,Solution,math 24 เฉลย,Game 24 เฉลย,24 Solver,คณิตศาสตร์ เกมส์ 24">
         <meta name="author" content="Jittagorn Pitakmetagoon">
         <meta property="og:title" content="Game 24" />
         <meta property="og:type" content="website" />
@@ -750,10 +750,13 @@
                 "1449" : [ "((1-4)+9)*4", "(1-(4-9))*4", "(4*4)-(1-9)", "4*((9+1)-4)", "9+((4*4)-1)", "4*((1+9)-4)", "9-(1-(4*4))", "((1+9)-4)*4", "(4*4)+(9-1)", "(1+(9-4))*4", "((4*4)-1)+9", "((9-4)+1)*4", "((4*4)+9)-1", "4*(1+(9-4))", "(9-(4-1))*4", "4*(9-(4-1))", "(9+(4*4))-1", "4*((1-4)+9)", "4*((9-4)+1)", "(9+(1-4))*4", "((9+1)-4)*4", "4*(1-(4-9))", "4*(9+(1-4))", "(9-1)+(4*4)" ]
             };
         </script>
-        <h1>Game 24</h1>
+        <h1>เฉลย (Solve) Game 24</h1>
         <input id="number" type="text" maxlength="4"/>
-        <button id="getResultButton">Get Solution</button>
-        <div id="result">Please input a number 4 digits, such as 1234.</div>
+        <button id="getResultButton">เฉย (Get answer)</button>
+        <div id="result">
+            กรุณากรอกตัวเลข 4 หลัก เช่น 1234 
+            (Please input a number 4 digits, such as 1234.)
+        </div>
         <script type="text/javascript" src="js/jquery.min.js"></script>
         <script type="text/javascript">
             (function ($) {
@@ -798,17 +801,17 @@
                     function search() {
                         var numb = $input.val();
                         if (!isValid(numb)) {
-                            $result.text('Require input is a number 4 digits, such as 1234.');
+                            $result.text('กรุณากรอกตัวเลข 4 หลัก เช่น 1234 (Please input a number 4 digits, such as 1234.)');
+                            return;
+                        } 
+                        
+                        var key = hashKey(numb);
+                        var arr = window.game24Results[key] || [];
+                        if (arr.length) {
+                            $result.text('').append('พบ ' + arr.length + ' คำตอบ (Found ' + arr.length + ' answers.)');
+                            $result.append($solutions(arr));
                         } else {
-                            $result.text('Processing...');
-                            var key = hashKey(numb);
-                            var arr = window.game24Results[key] || [];
-                            if (arr.length) {
-                                $result.text('').append('Found ' + arr.length + ' solutions.');
-                                $result.append($solutions(arr));
-                            } else {
-                                $result.text('Don\'t have solution.');
-                            }
+                            $result.text('ไม่พบคำตอบ (Don\'t have answer.)');
                         }
                     }
                 });
